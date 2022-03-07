@@ -1,0 +1,3 @@
+const apiServer = "https://localhost:8080"
+
+export default apiServer;
