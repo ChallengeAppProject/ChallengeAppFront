@@ -3,7 +3,7 @@ axios.defaults.headers.post['Content-Type'] = 'application/json';
 axios.defaults.headers.post['Accept'] = 'application/json';
 
 export const ApiService = () => {
-    let baseUrl = "https://localhost:8080";
+    let baseUrl = "http://localhost:8080";
     let urlChallenges = "/challenges";
 
     const get = async () => {
