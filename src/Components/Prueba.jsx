@@ -1,7 +1,21 @@
-import {getAllChallenges} from "../Services/APIService";
+import { ApiService } from "../Services/APIService";
+import React, { useState, useEffect } from 'react';
 
-export default function prueba(){
-    getAllChallenges().then(console.log(data));
-    
-    
+export default function Prueba(){
+
+const [challenge, setChallenge] = useState([]);
+
+let api = ApiService();
+
+useEffect(() => {
+    api.get().then(res => {
+        console.log(res);
+    })
+});
+
+return(
+    <div>
+
+    </div>
+    );  
 }

@@ -1,15 +1,32 @@
 import axios from "axios";
-import apiServer from "./Endpoint";
+axios.defaults.headers.post['Content-Type'] = 'application/json';
+axios.defaults.headers.post['Accept'] = 'application/json';
 
-export async function getAllChallenges(){
+export const ApiService = () => {
+    let baseUrl = "https://localhost:8080";
+    let urlChallenges = "/challenges";
+
+    const get = async () => {
+        const res = await axios.get(baseUrl + urlChallenges);
+        return res;
+    };
+
+    return{
+        get,
+    };
+}
+
+
+
+/*export async function getAllChallenges(){
     let data;
     try{
         data = await axios.get(apiServer + "/challenges").then((res) => res.data);
+   
     } catch{
         console.error("error gettingAllChallenges")
     }
 
     return data;
-}
+} */
 
-export default getAllChallenges;
