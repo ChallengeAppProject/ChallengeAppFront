@@ -1,11 +1,11 @@
-import './App.css';
-import Prueba from './Components/Prueba';
+import "./App.css";
+import { ChallengeList } from "./Components/Organisms/ChallengeList/ChallengeList";
 
 function App() {
   return (
     <div className="App">
       <h1>ChallengeApp</h1>
-      <Prueba />
+      <ChallengeList />
     </div>
   );
 }
