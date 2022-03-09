@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { ApiService } from "../../../Services/APIService";
 import { ChallengeCard } from "../../Molecules/ChallengeCard/ChallengeCard";
-
+import "./ChallengeList.css";
 
 export function ChallengeList() {
   const [challenges, setChallenge] = useState([]);
