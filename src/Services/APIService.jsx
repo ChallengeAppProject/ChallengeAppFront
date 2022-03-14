@@ -5,6 +5,7 @@ axios.defaults.headers.post['Accept'] = 'application/json';
 export const ApiService = () => {
     let baseUrl = "http://localhost:8080";
     let urlChallenges = "/challenges";
+    let urlQuestions = "/questions";
     
 
     const get = async () => {
@@ -16,10 +17,15 @@ export const ApiService = () => {
         const res = await axios.get(`${baseUrl}${urlChallenges}/${id}/questions`);
         return res;
     };
+    const getAnswersByQuestionID = async (id) => {
+        const res = await axios.get(`${baseUrl}${urlQuestions}/${id}/answers`);
+        return res;
+    };
 
     return{
         get,
         getQuestionsByChallengeID,
+        getAnswersByQuestionID,
     };
 }
 
