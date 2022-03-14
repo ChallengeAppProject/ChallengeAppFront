@@ -1,10 +1,10 @@
 
 
-export function AnswerCard({answer, questionId}) {
+export function AnswerCard({answer}) {
     return (
         <div className="car-container">
   
-  <input type="radio" name={questionId} value={questionId}></input>{answer.textAnswer}
+  <input type="radio" id={answer.id} name={answer.questionId} value={answer.questionId}></input>{answer.textAnswer}
         </div>
       );
     
