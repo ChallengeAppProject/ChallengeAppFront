@@ -1,0 +1,23 @@
+.navbar {
+    display: flex;
+    width: 100vw;
+    height: 53px;
+    background-color: rgba(18, 93, 152, 1);
+}
+.logoUser {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 30px;
+    top: 2px;
+}
+
+.burguer {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 1319px;
+    top: 6px;
+    background-color: transparent;
+}
+

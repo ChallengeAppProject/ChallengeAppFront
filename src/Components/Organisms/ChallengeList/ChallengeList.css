@@ -1,3 +1,7 @@
 li{
    list-style-type: none;
+   text-decoration: none;
+}
+ul {
+   text-decoration: none;
 }
