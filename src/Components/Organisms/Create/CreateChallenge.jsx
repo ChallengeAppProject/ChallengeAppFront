@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
 
-const initialForm = {
-  name: "",
-  id: null
-};
+// const initialForm = {
+//   name: "",
+//   id: null
+// };
 
-const CreateChallenge = ({createData, editData}) => {
+// const CreateChallenge = ({createData, editData}) => {
 
 //   const [form, setForm] = useState(initialForm);
 
@@ -39,25 +39,25 @@ const CreateChallenge = ({createData, editData}) => {
 //   }
 // };
 
-  return (
-    <form onSubmit={handleSubmit}>
-      <div className="form-group">
-        <label>CHALLENGE TITLE</label>
-        <input
-          type="text"
-          className="form-control"
-          onChange={handleChange}
-          value={form.name}
-          placeholder="Enter title"
-          name="name"
+//   return (
+//     <form onSubmit={handleSubmit}>
+//       <div className="form-group">
+//         <label>CHALLENGE TITLE</label>
+//         <input
+//           type="text"
+//           className="form-control"
+//           onChange={handleChange}
+//           value={form.name}
+//           placeholder="Enter title"
+//           name="name"
     
-        />
-      </div>
-      <button type="submit" className="btn btn-primary">
-        Submit
-      </button>
-    </form>
-  );
-};
+//         />
+//       </div>
+//       <button type="submit" className="btn btn-primary">
+//         Submit
+//       </button>
+//     </form>
+//   );
+// };
 
-export default CreateChallenge;
+// export default CreateChallenge;
