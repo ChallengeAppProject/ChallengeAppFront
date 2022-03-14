@@ -3,7 +3,7 @@ import { ApiService } from "../../../Services/APIService";
 import { ChallengeCard } from "../../Molecules/ChallengeCard/ChallengeCard";
 import "./ChallengeList.css";
 import { useParams } from "react-router-dom";
-import ChallengeLogo from "../../../Assets/ChallengeLogo.png"
+import ChallengeLogo2 from "../../../Assets/ChallengeLogo2.png"
 
 export function ChallengeList() {
   const [challenges, setChallenge] = useState([]);
@@ -22,7 +22,7 @@ export function ChallengeList() {
           <ChallengeCard challenge={challenge} />
         </li>
       ))}
-      <img className='challengeLogo' src={ChallengeLogo}></img>
+      <img className='challengeLogo' src={ChallengeLogo2}></img>
     </ul>
   );
 }

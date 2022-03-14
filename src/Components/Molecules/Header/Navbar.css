@@ -3,20 +3,19 @@
     width: 100vw;
     height: 53px;
     background-color: rgba(18, 93, 152, 1);
+    justify-content: space-between;
 }
 .logoUser {
-    position: absolute;
     width: 50px;
     height: 50px;
-    left: 30px;
-    top: 2px;
+    margin-left: 30px;
+    margin-top: -0.5%;
 }
 
 .burguer {
-    position: absolute;
     width: 40px;
     height: 40px;
-    left: 1319px;
+    left: 1000px;
     top: 6px;
     background-color: transparent;
 }
