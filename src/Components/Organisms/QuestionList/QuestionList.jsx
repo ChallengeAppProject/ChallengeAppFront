@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { ApiService } from "../../../Services/APIService";
 import { QuestionCard } from "../../Molecules/QuestionCard/QuestionCard";
 import { useParams } from "react-router-dom";
+import Navbar from "../../Molecules/Header/Navbar";
+import Footer from "../../Molecules/Footer/Footer";
 
 export function QuestionList() {
   const [questions, setQuestions] = useState([]);
@@ -17,6 +19,8 @@ export function QuestionList() {
   },[challengeId.id]);
 
   return (
+    <div>
+      <Navbar/>
       <form>
     
       {questions.map((question, index) => (
@@ -26,5 +30,7 @@ export function QuestionList() {
       ))}
     
     </form>
+    <Footer/>
+    </div>
   );
 }

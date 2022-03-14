@@ -1,15 +1,18 @@
 .card-container {
     background-color: rgba(18, 93, 152, 1);
     top: 50%;
-    display: flex;
+    display: grid;
+    grid-template-rows: 10px 10px 10px 10px;
     width: 40%;
     margin-left: 50%;
     margin-top: 3%;
     justify-content: center;
-    color: white;
-
+    border-radius: 2%;
+    text-decoration: none;
 }
 
 .challenge-container{
     text-decoration: none;
+    color: white;
+    background-color: rgba(18, 93, 152, 1);
 }

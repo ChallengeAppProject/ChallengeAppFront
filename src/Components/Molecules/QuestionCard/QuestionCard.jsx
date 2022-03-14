@@ -3,6 +3,7 @@ import { ApiService } from "../../../Services/APIService";
 import { useParams } from "react-router-dom"; 
 import { AnswerCard } from "../AnswerCard/AnswerCard";
 import { Button } from "bootstrap";
+import Navbar from "../Header/Navbar";
 
 export function QuestionCard({ question }) {
   const [answers, setAnswers] = useState([]);
@@ -19,10 +20,12 @@ export function QuestionCard({ question }) {
   }, [questionId.id]);
 
   return (
-    <div className="card-container">
+    <div>
+
+    <div className="car-container">
       <div>{question.challengeQuestion}</div>
 
-<form>
+<form> 
       <ul>
         {answers.map((answer, index) => (
           <li key={index}>
@@ -31,7 +34,9 @@ export function QuestionCard({ question }) {
         ))}
       </ul>
       <button>Submit Answers</button>
+      
       </form>
+    </div>
     </div>
   );
 }
