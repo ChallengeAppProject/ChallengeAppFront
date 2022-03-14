@@ -13,7 +13,7 @@ export function ChallengeList() {
   
     ApiService().get().then((res) => setChallenge(res.data))
     .catch(error => console.log(error.response));
-  });
+  },[]);
 
   return (
     <ul>

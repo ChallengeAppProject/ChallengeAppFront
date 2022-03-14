@@ -21,7 +21,7 @@ export function QuestionList() {
   return (
     <div>
       <Navbar/>
-      <form>
+  
     
       {questions.map((question, index) => (
         <li key={index}>
@@ -29,7 +29,7 @@ export function QuestionList() {
         </li>
       ))}
     
-    </form>
+ 
     <Footer/>
     </div>
   );
