@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-      <h1>ChallengeApp</h1>
+      <h1>Welcom to ChallengeApp</h1>
       <ChallengeList/>
     </div>
   );
