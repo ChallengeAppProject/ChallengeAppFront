@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { ApiService } from "../../../Services/APIService";
 import { useParams } from "react-router-dom"; 
 import { AnswerCard } from "../AnswerCard/AnswerCard";
+import { Button } from "bootstrap";
 
 export function QuestionCard({ question }) {
   const [answers, setAnswers] = useState([]);
@@ -21,6 +22,7 @@ export function QuestionCard({ question }) {
     <div className="card-container">
       <div>{question.challengeQuestion}</div>
 
+<form>
       <ul>
         {answers.map((answer, index) => (
           <li key={index}>
@@ -28,6 +30,8 @@ export function QuestionCard({ question }) {
           </li>
         ))}
       </ul>
+      <button>Submit Answers</button>
+      </form>
     </div>
   );
 }
