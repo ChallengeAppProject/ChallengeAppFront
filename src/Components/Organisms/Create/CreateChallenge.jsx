@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ApiService } from "../../../Services/APIService";
 import { useNavigate } from "react-router-dom";
-import burguer from "../../../Assets/burguer.png"
+import back from "../../../Assets/backArrow.png"
 
 const initialForm = {
     name: ''
@@ -55,7 +55,7 @@ function CreateChallenge() {
         <div>
             <div className="ct-form-create">
                 <h3 className='txt-title'>Create a new Challenge</h3>
-                <button className="bt-back" onClick={getBack}><img className="ico-back" src={burguer} alt="back button" /></button>
+                <button className="bt-back" onClick={getBack}><img className="ico-back" src={back} alt="back button" /></button>
             </div>
             <div className='container py-5'>
                 <div className='row justify-content-center'>
