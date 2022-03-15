@@ -12,7 +12,7 @@ function Router() {
       <Routes>
         <Route path="/challenges" element={<App />} />
         <Route path="/createChallenge" element={<CreateChallenge />} />
-        <Route path="/createQuestion" element={<CreateQuestion />} />
+        <Route path="/challenges/:id/question" element={<CreateQuestion />} />
         <Route path="/challenges/:id/questions" element={<QuestionList />} />
         <Route path="/questions/:id/answers" element={<QuestionCard />} />
 
