@@ -10,7 +10,7 @@ function Router() {
     <BrowserRouter>
       <Routes>
         <Route path="/challenges" element={<App />} />
-       {/*  <Route path="/create" element={<CreateChallenge />} /> */}
+        <Route path="/create" element={<CreateChallenge />} />
         <Route path="/challenges/:id/questions" element={<QuestionList />} />
         <Route path="/questions/:id/answers" element={<QuestionCard />} />
 
