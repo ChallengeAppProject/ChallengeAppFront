@@ -27,12 +27,18 @@ export const ApiService = () => {
     console.log(data);
     return res;
   };
+  const createQuestion = async (data, id) => {
+    const res = await axios.post( `${urlChallenges}/${id}/question`, data);
+    console.log(data);
+    return res;
+  };
 
   return {
     get,
     getQuestionsByChallengeID,
     getAnswersByQuestionID,
     createChallenge,
+    createQuestion,
   };
 };
 
