@@ -5,6 +5,7 @@ import CreateChallenge from "./Organisms/Create/CreateChallenge";
 import { QuestionList } from "./Organisms/QuestionList/QuestionList";
 import { QuestionCard } from "./Molecules/QuestionCard/QuestionCard";
 import CreateQuestion from "./Organisms/Create/CreateQuestion";
+import AdminLanding from "../Views/AdminLanding";
 
 function Router() {
   return (
@@ -15,6 +16,7 @@ function Router() {
         <Route path="/challenges/:id/question" element={<CreateQuestion />} />
         <Route path="/challenges/:id/questions" element={<QuestionList />} />
         <Route path="/questions/:id/answers" element={<QuestionCard />} />
+        <Route path="/admin_landing" element={<AdminLanding />} />
 
 
       </Routes>

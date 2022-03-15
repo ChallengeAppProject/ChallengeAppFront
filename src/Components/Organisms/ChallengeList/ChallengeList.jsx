@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { ApiService } from "../../../Services/APIService";
 import { ChallengeCard } from "../../Molecules/ChallengeCard/ChallengeCard";
 import "./ChallengeList.css";
-import { useParams } from "react-router-dom";
 import ChallengeLogo2 from "../../../Assets/ChallengeLogo2.png"
 
 export function ChallengeList() {

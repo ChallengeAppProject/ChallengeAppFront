@@ -10,11 +10,13 @@ const initialForm = {
 
 function CreateChallenge() {
 
-    const [form, setForm] = useState(initialForm);
+    const [ form, setForm ] = useState( initialForm );
+   
     /* const [error, setError] = useState([]); */
 
     let navigate = useNavigate();
     let api = ApiService();
+
 
     const handleChange = (e) => {
         e.persist();
@@ -36,12 +38,13 @@ function CreateChallenge() {
 
 
         api.createChallenge(form).then((res) => {
-            alert( res.data );
+            alert( "New challenge created" );
             console.log( res );
+            navigate('/challenges/'+`${res.data.id}`+'/question')
             /* setError([]); */
-            navigate('/challenges');
+            
         }).catch((error) => {
-            alert(`Error ${error.response.status}. Sorry, ${error.response.statusText}`)
+            alert(`Error ${error}. Sorry, ${error}`)
             /* setError( error.response.data.msg );
             console.log(error, error.name) */
         })            

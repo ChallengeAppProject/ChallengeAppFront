@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ApiService } from "../../../Services/APIService";
 import { useNavigate, useParams } from "react-router-dom";
 import back from "../../../Assets/backArrow.png";
@@ -9,13 +9,27 @@ const initialForm = {
 };
 
 function CreateQuestion() {
-  let challengeId = useParams();
-
+  const [challenge, setChallenge] = useState([]);
   const [form, setForm] = useState(initialForm);
-  /* const [error, setError] = useState([]); */
+  const [error, setError] = useState([]);
 
+  let challengeById = useParams();
   let navigate = useNavigate();
-  let api = ApiService();
+
+  const challengeId = challengeById.id;
+
+    useEffect( () =>
+    {
+      const challengeNew = challengeById.id
+    ApiService()
+      .getChallengeById(challengeNew)
+      .then((res) => setChallenge(res.data))
+
+      .catch((error) => console.log(error.response));
+  }, [challengeById.id]);
+
+  console.log(challengeId);
+
 
   const handleChange = (e) => {
     e.persist();
@@ -27,37 +41,37 @@ function CreateQuestion() {
 
   const handleReset = (e) => {
     setForm(initialForm);
-    /* setError([]); */
+    setError([]);
   };
 
   const submitForm = (e) => {
     e.preventDefault();
-    const paramsId = challengeId.id;
-    console.log(paramsId);
-    api
-      .createQuestion(form, paramsId)
+
+    ApiService()
+      .createQuestion(form, challengeId)
       .then((res) => {
         alert(res.data);
         console.log(res);
-        /* setError([]); */
-        navigate("/challenges");
+        setError([]);
       })
-      .catch((error) => {
-        alert(
-          `Error ${error.response.status}. Sorry, ${error.response.statusText}`
-        );
-        /* setError( error.response.data.msg );
-                console.log(error, error.name) */
-      },[paramsId]);
+      .catch(
+        (error) => {
+          alert(`Error ${error}. Sorry, ${error}`);
+          console.log(error, error.response);
+          setError(error.response);
+        },
+        [challengeId]
+      );
   };
 
   const getBack = () => {
-    navigate("/challenges");
+    navigate("/createChallenge");
   };
 
   return (
     <div>
       <div className="ct-form-create">
+              <h2 className="txt-title">{ challenge.name }</h2>
         <h3 className="txt-title">Create a new Question</h3>
         <button className="bt-back" onClick={getBack}>
           <img className="ico-back" src={back} alt="back button" />
@@ -91,7 +105,7 @@ function CreateQuestion() {
                       className="form-control"
                     />
                   </div>
-                  {/* <span className="error-register">{ error.name }</span> */}
+                  <span className="error-register">{error}</span>
 
                   <div className="form-group my-3">
                     <button type="submit" className="bt-form-send">
