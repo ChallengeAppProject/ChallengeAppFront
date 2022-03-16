@@ -1,8 +1,11 @@
 .footer {
-    position: absolute;
-    width: 100vw;
-    height: 30px;
-    left: 0px;
-    top: 655px;
-    background-color: rgba(18, 93, 152, 1);
+  position: absolute;
+  width: 100vw;
+  height: 8%;
+  background: linear-gradient(70deg, #3c8dad, #125d98);
+  bottom: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

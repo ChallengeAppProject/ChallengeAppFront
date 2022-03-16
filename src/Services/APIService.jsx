@@ -2,7 +2,7 @@ import axios from "axios";
 axios.defaults.baseURL = "http://localhost:8080";
 axios.defaults.headers.post["Content-Type"] = "application/json";
 axios.defaults.headers.post["Accept"] = "*/*";
-axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
+/* axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*"; */
 
 export const ApiService = () => {
   let baseUrl = "http://localhost:8080";

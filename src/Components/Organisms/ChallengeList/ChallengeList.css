@@ -1,13 +1,16 @@
-li{
-   list-style-type: none;
-   text-decoration: none;
+ul {
+  display: flex;
+  float: left;
+}
+
+li {
+  list-style-type: none;
+  text-decoration: none;
+  margin: 2%;
 }
 .challengeLogo {
-   
-   width: 400px;
-   height: 400px;
-   margin-right: 50%;
-   margin-top: -15%;
-  
-
+  display: flex;
+  width: 400px;
+  height: 400px;
+  float: left;
 }

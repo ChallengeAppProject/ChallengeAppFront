@@ -16,20 +16,14 @@ function CreateQuestion() {
   let challengeById = useParams();
   let navigate = useNavigate();
 
-  const challengeId = challengeById.id;
-
-    useEffect( () =>
-    {
-      const challengeNew = challengeById.id
+  useEffect(() => {
+    const challengeNew = challengeById.id;
     ApiService()
       .getChallengeById(challengeNew)
       .then((res) => setChallenge(res.data))
 
       .catch((error) => console.log(error.response));
   }, [challengeById.id]);
-
-  console.log(challengeId);
-
 
   const handleChange = (e) => {
     e.persist();
@@ -46,6 +40,7 @@ function CreateQuestion() {
 
   const submitForm = (e) => {
     e.preventDefault();
+    const challengeId = challengeById.id;
 
     ApiService()
       .createQuestion(form, challengeId)
@@ -57,10 +52,10 @@ function CreateQuestion() {
       .catch(
         (error) => {
           alert(`Error ${error}. Sorry, ${error}`);
-          console.log(error, error.response);
+          console.log(error.response);
           setError(error.response);
         },
-        [challengeId]
+        [challengeById.id]
       );
   };
 
@@ -71,7 +66,7 @@ function CreateQuestion() {
   return (
     <div>
       <div className="ct-form-create">
-              <h2 className="txt-title">{ challenge.name }</h2>
+        <h2 className="txt-title">{challenge.name}</h2>
         <h3 className="txt-title">Create a new Question</h3>
         <button className="bt-back" onClick={getBack}>
           <img className="ico-back" src={back} alt="back button" />
@@ -114,7 +109,8 @@ function CreateQuestion() {
                     <button
                       type="reset"
                       className="bt-form-reset"
-                      onClick={handleReset}>
+                      onClick={handleReset}
+                    >
                       Cancel
                     </button>
                   </div>
