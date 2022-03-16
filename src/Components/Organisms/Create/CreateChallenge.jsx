@@ -51,7 +51,7 @@ function CreateChallenge() {
     };
 
     const getBack = () => {
-        navigate('/challenges');
+        navigate('/admin_landing');
     };
     
     return (
