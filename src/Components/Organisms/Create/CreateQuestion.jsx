@@ -34,9 +34,7 @@ function CreateQuestion() {
     e.preventDefault();
     const paramsId = challengeId.id;
     console.log(paramsId);
-    api
-      .createQuestion(form, paramsId)
-      .then((res) => {
+    api.createQuestion(form, paramsId).then((res) => {
         alert(res.data);
         console.log(res);
         /* setError([]); */

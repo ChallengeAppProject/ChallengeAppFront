@@ -1,20 +1,34 @@
 .navbar {
     display: flex;
-    width: 100vw;
-    height: 53px;
+    align-items: flex-start;
+    height: 10vmin;
     background-color: rgba(18, 93, 152, 1);
-    justify-content: space-between;
+    
 }
 .logoUser {
-    width: 50px;
-    height: 50px;
-    margin-left: 30px;
-    margin-top: -0.5%;
-}
+margin-bottom: auto;
+    width: 8vmin;
+    height: 8vmin;
+   
+    
 
+}
+.ChallengeLogoNav {
+    
+   
+    width: 20vmin;
+    height: 20vmin;
+   
+
+    background-color: transparent;
+
+   
+      
+}
 .burguer {
-    width: 40px;
-    height: 40px;
+    margin-bottom: auto;
+    width: 6vmin;
+    height: 6vmin;
     background-color: transparent;
 }
 

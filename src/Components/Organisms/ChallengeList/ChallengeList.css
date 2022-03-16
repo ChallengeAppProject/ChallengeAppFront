@@ -1,13 +1,9 @@
-li{
-   list-style-type: none;
-   text-decoration: none;
-}
-.challengeLogo {
-   
-   width: 400px;
-   height: 400px;
-   margin-right: 50%;
-   margin-top: -15%;
+.challengeIndex{
   
+display: flex;
+flex-direction: column;
 
+   
+   background-color: brown;
 }
+

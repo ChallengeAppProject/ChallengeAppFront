@@ -18,11 +18,11 @@ export function ChallengeList() {
   return (
     <ul>
       {challenges.map((challenge, index) => (
-        <li key={index}>
+        <li className='challengeIndex' key={index}>
           <ChallengeCard challenge={challenge} />
         </li>
       ))}
-      <img className='challengeLogo' src={ChallengeLogo2}></img>
+      <img className='challengeLogoWelcome' src={ChallengeLogo2}></img>
     </ul>
   );
 }
