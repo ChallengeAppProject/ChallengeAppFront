@@ -5,7 +5,7 @@ class Footer extends Component {
   render() {
     return (
       <div className="footer">
-        <p>Challenge App®</p>
+        <p className="footerText">Challenge App®</p>
       </div>
     );
   }

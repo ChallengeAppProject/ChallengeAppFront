@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { ApiService } from "../../../Services/APIService";
 import { useNavigate, useParams } from "react-router-dom";
 import "./CreateQuestion.css";
-import { QuestionList } from "../QuestionList/QuestionList";
+import back from "../../../Assets/backArrow.png";
 const initialForm = {
   challengeQuestion: "",
   imgUrl: "",
@@ -66,6 +66,9 @@ function CreateQuestion() {
   return (
     <div>
       <div className="ct-form-create">
+        <button className="bt-back" onClick={getBack}>
+          Back
+        </button>
         <h2>Challenge {challenge.name}</h2>
       </div>
       <div className="container py-5">
@@ -76,6 +79,7 @@ function CreateQuestion() {
                 <h3 className="txt-title">Create a Question</h3>
                 <p>Please fill the form for create a question</p>
               </div>
+
               <div className="card-body">
                 <form onSubmit={submitForm}>
                   <div className="form-group">
