@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { ApiService } from "../../../Services/APIService";
 import { useNavigate, useParams } from "react-router-dom";
-import back from "../../../Assets/backArrow.png";
-
+import "./CreateQuestion.css";
+import { QuestionList } from "../QuestionList/QuestionList";
 const initialForm = {
   challengeQuestion: "",
   imgUrl: "",
@@ -66,20 +66,15 @@ function CreateQuestion() {
   return (
     <div>
       <div className="ct-form-create">
-        <h2 className="txt-title">{challenge.name}</h2>
-        <h3 className="txt-title">Create a new Question</h3>
-        <button className="bt-back" onClick={getBack}>
-          <img className="ico-back" src={back} alt="back button" />
-        </button>
+        <h2>Challenge {challenge.name}</h2>
       </div>
       <div className="container py-5">
         <div className="row justify-content-center">
           <div className="col-lg-6">
             <div className="card">
-              <div className="card-header">
-                <h5 className="txt-title-form">
-                  Please fill the form for create a Question
-                </h5>
+              <div className="card-title">
+                <h3 className="txt-title">Create a Question</h3>
+                <p>Please fill the form for create a question</p>
               </div>
               <div className="card-body">
                 <form onSubmit={submitForm}>
@@ -91,7 +86,9 @@ function CreateQuestion() {
                       onChange={handleChange}
                       value={form.challengeQuestion}
                       className="form-control"
+                      required
                     />
+                    <label className="txt-label-form">Image</label>
                     <input
                       type="text"
                       name="imgUrl"
@@ -103,15 +100,15 @@ function CreateQuestion() {
                   <span className="error-register">{error}</span>
 
                   <div className="form-group my-3">
-                    <button type="submit" className="bt-form-send">
+                    <button type="submit" className="btnchll">
                       Create
                     </button>
                     <button
                       type="reset"
-                      className="bt-form-reset"
+                      className="btnchll"
                       onClick={handleReset}
                     >
-                      Cancel
+                      Clear
                     </button>
                   </div>
                 </form>

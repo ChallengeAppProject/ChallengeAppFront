@@ -1,24 +1,20 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from "../App";
-import CreateChallenge from "./Organisms/Create/CreateChallenge";
+import CreateChallenges from "../Views/Pages/Admin/CreateChallenges";
 import { QuestionList } from "./Organisms/QuestionList/QuestionList";
 import { QuestionCard } from "./Molecules/QuestionCard/QuestionCard";
-import CreateQuestion from "./Organisms/Create/CreateQuestion";
-import AdminLanding from "../Views/AdminLanding";
+import CreateQuestions from "../Views/Pages/Admin/CreateQuestions";
 
 function Router() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/challenges" element={<App />} />
-        <Route path="/createChallenge" element={<CreateChallenge />} />
-        <Route path="/challenges/:id/question" element={<CreateQuestion />} />
+        <Route path="/createChallenge" element={<CreateChallenges />} />
+        <Route path="/challenges/:id/question" element={<CreateQuestions />} />
         <Route path="/challenges/:id/questions" element={<QuestionList />} />
         <Route path="/questions/:id/answers" element={<QuestionCard />} />
-        <Route path="/admin_landing" element={<AdminLanding />} />
-
-
       </Routes>
     </BrowserRouter>
   );

@@ -1,11 +1,12 @@
 .footer {
   position: absolute;
   width: 100vw;
-  height: 8%;
+  height: 10%;
   background: linear-gradient(70deg, #3c8dad, #125d98);
   bottom: 0;
-  color: white;
+  color: #3c8dad;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: x-large;
 }
