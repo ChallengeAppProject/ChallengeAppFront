@@ -1,11 +1,10 @@
-label {
-  margin: 5px;
-}
-
 .ct-form-create {
   text-align: center;
   color: #125d98;
   margin-top: 30px;
+}
+.txt-label-form {
+  margin: 5px 0 5px 0;
 }
 
 .bt-back {

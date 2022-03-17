@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { ApiService } from "../../../Services/APIService";
 import { useNavigate, useParams } from "react-router-dom";
-import "./CreateQuestion.css";
-
+import "./CreateAnswer.css";
 const initialForm = {
   challengeQuestion: "",
   imgUrl: "",
 };
 
-function CreateQuestion() {
+function CreateAnswer() {
   const [challenge, setChallenge] = useState([]);
   const [form, setForm] = useState(initialForm);
   const [error, setError] = useState([]);
@@ -59,8 +58,8 @@ function CreateQuestion() {
       );
   };
 
-  const getBack = () => {
-    navigate("/create/challenge");
+  const getBack = (id) => {
+    navigate("/challenges/:id/question");
   };
 
   return (
@@ -69,21 +68,21 @@ function CreateQuestion() {
         <button className="bt-back" onClick={getBack}>
           Back
         </button>
-        <h2>Challenge {challenge.name}</h2>
+        <h2>Question {challenge.name}</h2>
       </div>
       <div className="container py-5">
         <div className="row justify-content-center">
           <div className="col-lg-6">
             <div className="card">
               <div className="card-title">
-                <h3 className="txt-title">Create a Question</h3>
-                <p>Please fill the form for create a question</p>
+                <h3 className="txt-title">Create an answer</h3>
+                <p>Please fill the form for create an answer</p>
               </div>
 
               <div className="card-body">
                 <form onSubmit={submitForm}>
                   <div className="form-group">
-                    <label className="txt-label-form">Question</label>
+                    <label className="txt-label-form">Answer</label>
                     <input
                       type="text"
                       name="challengeQuestion"
@@ -92,14 +91,31 @@ function CreateQuestion() {
                       className="form-control"
                       required
                     />
-                    <label className="txt-label-form">Image</label>
-                    <input
-                      type="text"
-                      name="imgUrl"
-                      onChange={handleChange}
-                      value={form.imgUrl}
-                      className="form-control"
-                    />
+                    <div className="form-check">
+                      <input
+                        className="form-check-input"
+                        type="radio"
+                        name="check"
+                        id="true"
+                        value="true"
+                        checked
+                      />
+                      <label className="form-check-label" for="true">
+                        True
+                      </label>
+                    </div>
+                    <div className="form-check">
+                      <input
+                        className="form-check-input"
+                        type="radio"
+                        name="check"
+                        id="false"
+                        value="false"
+                      />
+                      <label className="form-check-label" for="false">
+                        False
+                      </label>
+                    </div>
                   </div>
                   <span className="error-register">{error}</span>
 
@@ -125,4 +141,4 @@ function CreateQuestion() {
   );
 }
 
-export default CreateQuestion;
+export default CreateAnswer;
