@@ -1,34 +1,31 @@
 .navbar {
-    display: flex;
-    align-items: flex-start;
-    height: 10vmin;
+
     background-color: rgba(18, 93, 152, 1);
     
 }
 .logoUser {
-margin-bottom: auto;
-    width: 8vmin;
-    height: 8vmin;
-   
-    
+    margin-bottom: auto;
+    margin-left: 2vmin;
+    margin-top: 0.5vmin;
+    width: 7vmin;
+    height: 7vmin;   
 
 }
 .ChallengeLogoNav {
-    
-   
-    width: 20vmin;
-    height: 20vmin;
+    margin-bottom: auto;
+    margin-top: 0.1vmin;
+    width: 12vmin;
    
 
     background-color: transparent;
-
-   
       
 }
-.burguer {
+.house{
     margin-bottom: auto;
-    width: 6vmin;
-    height: 6vmin;
+    margin-top: 0.5vmin;
+    margin-right: 2vmin;
+    width: 7vmin;
+    height: 7vmin;
     background-color: transparent;
 }
 

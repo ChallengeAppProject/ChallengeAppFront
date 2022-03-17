@@ -1,18 +1,39 @@
+*{
+    background: rgb(199, 199, 199);
+ 
+}
 .card-container {
-    background-color: rgba(18, 93, 152, 1);
-    top: 50%;
-    display: grid;
-    grid-template-rows: 10px 10px 10px 10px;
-    width: 40%;
-    margin-left: 50%;
-    margin-top: 3%;
-    justify-content: center;
-    border-radius: 2%;
-    text-decoration: none;
+   
+   box-sizing: content-box;
+   width: 50vmin;
+   height: 20vmin;
+    
 }
 
 .challenge-container{
+  
+   margin-bottom: 3vmin;
+  
     text-decoration: none;
-    color: white;
+    height: 60px;
+    color: rgb(255, 255, 255);
+  
     background-color: rgba(18, 93, 152, 1);
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    align-items: center;
+    box-sizing:border-box;
+    border-radius: 25px;
+   
+   
+    white-space: nowrap;
+}
+@media (max-width: 700px) {
+
+    
+    .challenge-container{
+       width: 100vmin;
+       background-color: brown;
+}
 }

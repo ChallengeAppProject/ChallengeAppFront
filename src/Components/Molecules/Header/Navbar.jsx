@@ -1,8 +1,8 @@
 import { Component } from 'react';
 import './Navbar.css'
 import logoUser from "../../../Assets/logoUser.png"
-import burguer from "../../../Assets/burguer.png"
-import ChallengeLogo2 from "../../../Assets/ChallengeLogo2.png"
+import ChallengeLogo2 from "../../../Assets/LogoChallengeAppBLANCO.png"
+import House from "../../../Assets/House.png"
 
 class Navbar extends Component {
     render() {
@@ -10,7 +10,7 @@ class Navbar extends Component {
             <div className="navbar">
                 <img className='logoUser' src={logoUser}></img>
                 <img className='ChallengeLogoNav' src={ChallengeLogo2}></img>
-                <img className='burguer' src={burguer}></img>
+                <img className='house' src={House}></img>
                 
             </div>
         )

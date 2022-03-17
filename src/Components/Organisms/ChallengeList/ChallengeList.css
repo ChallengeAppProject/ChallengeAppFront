@@ -1,9 +1,36 @@
-.challengeIndex{
-  
-display: flex;
-flex-direction: column;
+.challengeIndexContainer{
+  color:white ;
 
-   
-   background-color: brown;
+padding-bottom: 100px;
+}
+.challengeIndex{
+   display: flex;
+   flex-direction: column; 
+   align-items: center;
+   font-family: Arial;
+   text-decoration: none; 
+   padding-inline-start: 10px;
+   padding-inline-end: 10px;
+   border-radius: 25px;
+   margin-left: 55vmin;
+   margin-right: 10vmin;
+   margin-top: 4vmin;
+  
+   background-color: rgba(18, 93, 152, 1);  
 }
 
+.challengeLogoWelcome{
+   margin-top: 0px;
+   width: 50vmin;
+ 
+   background-color: transparent;
+  
+}
+h1{
+   display: flex;
+   justify-content: center;
+   margin-top: 50px;
+   color: rgba(18, 93, 152, 1);
+   background-color: transparent;
+
+}
