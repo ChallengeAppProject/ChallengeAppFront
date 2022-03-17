@@ -16,7 +16,7 @@ padding-bottom: 100px;
    margin-right: 10vmin;
    margin-top: 4vmin;
   
-   background-color: rgba(18, 93, 152, 1);  
+  
 }
 
 .challengeLogoWelcome{
@@ -29,7 +29,7 @@ padding-bottom: 100px;
 h1{
    display: flex;
    justify-content: center;
-   margin-top: 50px;
+  
    color: rgba(18, 93, 152, 1);
    background-color: transparent;
 
