@@ -1,26 +1,28 @@
 *{
     background: rgb(199, 199, 199);
- 
+    
 }
 .card-container {
    
    box-sizing: content-box;
    width: 50vh;
    height: 20vh;
-    
+
 }
 
 .challenge-container{
-    width: 40vh;
+    width: 45vh;
     height: 60px;
-    font-size: smaller;
+    display: flex;
+    
     margin-bottom: 1vh;
+    margin-right: 10vh;
     align-self:baseline;
     text-decoration: none;
     white-space: nowrap;
     color: rgb(255, 255, 255);
     background-color: rgba(18, 93, 152, 1);
-    display: flex;
+   
     word-break: break-all;
     justify-content: center;
     align-items: center;
@@ -32,14 +34,9 @@
 
     
     .challenge-container{
-       width: 40vh;
-       height: 7vh;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       word-break: break-all;
       
-     
+       
+       
        background-color: brown;
 }
 }
