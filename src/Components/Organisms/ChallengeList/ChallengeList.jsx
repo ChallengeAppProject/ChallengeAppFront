@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import { ApiService } from "../../../Services/APIService";
-import { ChallengeCard } from "../../Molecules/ChallengeCard/ChallengeCard";
 import "./ChallengeList.css";
 import { useParams } from "react-router-dom";
 import LogoChallengeApp from "../../../Assets/LogoChallengeApp.png"
-import "../../Molecules/ChallengeCard/challengeCard.css";
+import { Link } from "react-router-dom";
 
 export function ChallengeList() {
   const [challenges, setChallenge] = useState([]);
@@ -17,15 +16,18 @@ export function ChallengeList() {
   },[]);
 
   return (
+    
     <div>
       <h1 className='welcomeTitle'>Welcome to ChallengeApp</h1>
     <ul className='challengeIndexContainer'>
       {challenges.map((challenge, index) => (
         <li className='challengeIndex' key={index}>
-          <ChallengeCard challenge={challenge} />
+          <Link to={`/challenges/${challenge.id}/questions`} className="challenge-container">{challenge.name}</Link>
         </li>
+        
       ))}
       <img className='challengeLogoWelcome' src={LogoChallengeApp}></img>
+      
     </ul>
     </div>
   );

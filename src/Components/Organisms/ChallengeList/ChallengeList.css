@@ -1,37 +1,54 @@
-.challengeIndexContainer{
-  color:white ;
 
-padding-bottom: 100px;
-}
-.challengeIndex{
+
+.challengeIndexContainer{
    display: flex;
-   flex-direction: column; 
-   align-items: center;
-   font-family: Arial;
+   flex-direction: column;
+   background-color: rgb(255, 255, 255);
+   padding-bottom: 100px;
+}
+
+.challenge-container{
+   color: white;
    text-decoration: none; 
-   padding-inline-start: 10px;
-   padding-inline-end: 10px;
+   font-family: Arial;  
+}
+
+.welcomeTitle{
+   background: rgb(255, 255, 255);
+}
+
+.challengeIndex{
+   width: 45vh;
+   height: 60px;
+   display: flex; 
+   align-items: center;
    border-radius: 25px;
-   margin-left: 55vmin;
-   margin-right: 10vmin;
    margin-top: 4vmin;
-   
-  
+   justify-content: center;
+   white-space: nowrap;
+   background-color: rgba(18, 93, 152, 1);    
+}
+
+.challenge-container:hover{
+   color: rgb(253, 186, 0);
+}
+
+@media (max-width: 700px) { 
+   .challengeIndex{  
+      background-color: rgba(18, 93, 152, 1);
+   }
 }
 
 .challengeLogoWelcome{
+   display: flex;
    margin-top: 0vh;
-
    width: 50vmin;
- 
-   background-color: transparent;
-  
+   background-color: transparent; 
 }
+
 h1{
    display: flex;
    justify-content: center;
-  
    color: rgba(18, 93, 152, 1);
    background-color: transparent;
-
 }
