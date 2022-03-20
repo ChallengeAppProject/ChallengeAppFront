@@ -1,79 +1,84 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { ApiService } from "../../../Services/APIService";
 import { useNavigate, useParams } from "react-router-dom";
 import "./CreateAnswer.css";
 const initialForm = {
   textAnswer: "",
-  correctAnswer: "false",
+  correctAnswer: "",
 };
 
 function CreateAnswer() {
-  const [ question, setQuestion ] = useState( [] );
-  
+  const [question, setQuestion] = useState([]);
+  const [challenge, setChallenge] = useState([]);
   const [form, setForm] = useState(initialForm);
   const [error, setError] = useState([]);
+
+  const challengeName = question.challengeId;
 
   let questionById = useParams();
   let navigate = useNavigate();
 
+  const getChallengeById = useCallback(() => {
+    ApiService()
+      .getChallengeById(challengeName)
+      .then((res) => setChallenge(res.data))
+      .catch((error) => console.log(error.response));
+  }, [challengeName]);
+
   useEffect(() => {
     const questionNew = questionById.id;
+
     ApiService()
       .getQuestionById(questionNew)
       .then((res) => setQuestion(res.data))
-
       .catch((error) => console.log(error.response));
-  }, [questionById.id]);
+    getChallengeById();
+  }, [questionById.id, getChallengeById]);
 
   const handleChange = (e) => {
-    e.persist();
-    console.log( e );
     setForm({
       ...form,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleChangeBoolean = (e) => {
-    e.persist();
-    console.log( e );
     setForm({
       ...form,
-      [e.target.name]: e.target.id
+      [e.target.name]: e.target.id,
     });
   };
 
   const handleReset = (e) => {
-    setForm(initialForm);
+    setForm([]);
     setError([]);
   };
 
   const submitForm = (e) => {
     e.preventDefault();
-    console.log(e)
     const questionId = questionById.id;
 
     ApiService()
       .createAnswer(form, questionId)
       .then((res) => {
-        alert("New answer created");
         console.log(res);
+        alert("New answer created");
         setError([]);
       })
       .catch(
         (error) => {
           alert(` Sorry, ${error}`);
-          console.log(error.response);
           setError(error.response);
         },
         [questionById.id]
-    ); setForm( initialForm );
+      );
+    setForm([]);
+    // navigate( "/questions/" + `${ question.id }` + "/answer" ); No va :P
   };
-
-
+  console.log(form);
 
   const getBack = (id) => {
-    navigate( "/challenges/" +`${question.id}`+"/question");
+    navigate("/challenges/" + `${question.challengeId}` + "/question");
   };
 
   return (
@@ -82,6 +87,7 @@ function CreateAnswer() {
         <button className="bt-back" onClick={getBack}>
           Back
         </button>
+        <h2>Challenge: {challenge.name}</h2>
         <h2>Question: {question.challengeQuestion}</h2>
       </div>
       <div className="container py-5">
@@ -90,7 +96,7 @@ function CreateAnswer() {
             <div className="card">
               <div className="card-title">
                 <h3 className="txt-title">Create an answer</h3>
-                <p>Please fill the form for create an answer</p>
+                <p>Please fill the form to create an answer</p>
               </div>
 
               <div className="card-body">
@@ -100,6 +106,7 @@ function CreateAnswer() {
                     <input
                       type="text"
                       name="textAnswer"
+                      placeholder="Write answer here"
                       onChange={handleChange}
                       value={form.answerText}
                       className="form-control"
@@ -110,13 +117,12 @@ function CreateAnswer() {
                         className="form-check-input"
                         type="radio"
                         name="correctAnswer"
-                        onChange={handleChangeBoolean}
+                        onClick={handleChangeBoolean}
                         id="true"
-                        value="1"
-                  
+                        value={form.correctAnswer}
                       />
                       <label className="form-check-label">
-                        True
+                        Select this to create a TRUE answer
                       </label>
                     </div>
                     <div className="form-check">
@@ -124,26 +130,27 @@ function CreateAnswer() {
                         className="form-check-input"
                         type="radio"
                         name="correctAnswer"
+                        onClick={handleChangeBoolean}
                         id="false"
-                        value="0"
-                      
+                        value={form.correctAnswer}
                       />
                       <label className="form-check-label">
-                        False
+                        Select this to create a FALSE answer
                       </label>
                     </div>
                   </div>
-                  {/* <span className="error-register">{error}</span> */}
+                  <span className="error-register">{error}</span>
 
                   <div className="form-group my-3">
-                    <button type="submit" className="btnchll">
+                    <button
+                      type="submit"
+                      className="btnchll">
                       Create
                     </button>
                     <button
                       type="reset"
                       className="btnchll"
-                      onClick={handleReset}
-                    >
+                      onClick={handleReset}>
                       Clear
                     </button>
                   </div>

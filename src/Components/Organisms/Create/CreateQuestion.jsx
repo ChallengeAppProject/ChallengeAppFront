@@ -3,6 +3,7 @@ import { ApiService } from "../../../Services/APIService";
 import { useNavigate, useParams } from "react-router-dom";
 import "./CreateQuestion.css";
 import { QuestionCard } from "../../Molecules/QuestionCard/QuestionCard";
+import CreateAnswer from "./CreateAnswer";
 
 const initialForm = {
   challengeQuestion: "",
@@ -46,8 +47,8 @@ function CreateQuestion() {
     ApiService()
       .createQuestion(form, challengeId)
       .then((res) => {
-          alert( "New question created" );
-          navigate("/questions/" + `${res.data.id}` + "/answer");
+        alert("New question created");
+        navigate("/questions/" + `${res.data.id}` + "/answer");
         console.log(res);
         setError([]);
       })
@@ -58,11 +59,20 @@ function CreateQuestion() {
           setError(error.response);
         },
         [challengeById.id]
-      );setForm(initialForm)
+      );
+    setForm(initialForm);
   };
 
   const getBack = () => {
     navigate("/create/challenge");
+  };
+
+  const addAnswers = () => {
+    return (
+      <div>
+        <CreateAnswer />
+      </div>
+    );
   };
 
   return (
@@ -79,7 +89,7 @@ function CreateQuestion() {
             <div className="card">
               <div className="card-title">
                 <h3 className="txt-title">Create a Question</h3>
-                <p>Please fill the form for create a question</p>
+                <p>Please fill the form to create a question</p>
               </div>
 
               <div className="card-body">
@@ -89,6 +99,7 @@ function CreateQuestion() {
                     <input
                       type="text"
                       name="challengeQuestion"
+                      placeholder="Write question here"
                       onChange={handleChange}
                       value={form.challengeQuestion}
                       className="form-control"
@@ -98,6 +109,7 @@ function CreateQuestion() {
                     <input
                       type="text"
                       name="imgUrl"
+                      placeholder="Please, paste an image url direction here"
                       onChange={handleChange}
                       value={form.imgUrl}
                       className="form-control"
@@ -112,17 +124,17 @@ function CreateQuestion() {
                     <button
                       type="reset"
                       className="btnchll"
-                      onClick={handleReset}
-                    >
+                      onClick={handleReset}>
                       Clear
                     </button>
                   </div>
                 </form>
-                          </div>
-                              {/* <QuestionCard/> */}
-                    
-                          
+              </div>
+              {/* <QuestionCard/> */}
             </div>
+            <button className="bt-addAnswers" onClick={addAnswers}>
+              Add Answers
+            </button>
           </div>
         </div>
       </div>
