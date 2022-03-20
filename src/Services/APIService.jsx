@@ -2,7 +2,6 @@ import axios from "axios";
 axios.defaults.baseURL = "http://localhost:8080";
 axios.defaults.headers.post["Content-Type"] = "application/json";
 axios.defaults.headers.post["Accept"] = "*/*";
-/* axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*"; */
 
 export const ApiService = () => {
   let baseUrl = "http://localhost:8080";
@@ -16,6 +15,10 @@ export const ApiService = () => {
 
   const getChallengeById = async (id) => {
     const res = await axios.get(`${urlChallenges}/${id}`);
+    return res;
+  };
+  const getQuestionById = async (id) => {
+    const res = await axios.get(`${urlQuestions}/${id}`);
     return res;
   };
 
@@ -40,7 +43,7 @@ export const ApiService = () => {
   };
 
   const createAnswer = async (data, id) => {
-    const res = await axios.post(`${urlChallenges}/${id}/question`, data);
+    const res = await axios.post(`${urlQuestions}/${id}/answer`, data);
     console.log(data);
     return res;
   };
@@ -48,6 +51,7 @@ export const ApiService = () => {
   return {
     get,
     getChallengeById,
+    getQuestionById,
     getQuestionsByChallengeID,
     getAnswersByQuestionID,
     createChallenge,

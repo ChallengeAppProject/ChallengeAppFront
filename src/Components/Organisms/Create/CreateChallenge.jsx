@@ -10,7 +10,7 @@ const initialForm = {
 function CreateChallenge() {
   const [form, setForm] = useState(initialForm);
 
-  /* const [error, setError] = useState([]); */
+  const [error, setError] = useState([]);
 
   let navigate = useNavigate();
   let api = ApiService();
@@ -25,7 +25,7 @@ function CreateChallenge() {
 
   const handleReset = (e) => {
     setForm(initialForm);
-    /* setError([]); */
+    setError([]);
   };
 
   const submitForm = (e) => {
@@ -37,22 +37,25 @@ function CreateChallenge() {
         alert("New challenge created");
         console.log(res);
         navigate("/challenges/" + `${res.data.id}` + "/question");
-        /* setError([]); */
+        setError([]);
       })
       .catch((error) => {
-        alert(`Error ${error}. Sorry, ${error}`);
-        /* setError( error.response.data.msg );
-            console.log(error, error.name) */
-      });
+        alert(`Sorry, ${error}`);
+        setError( error);
+            console.log(error)
+      });setForm(initialForm)
   };
 
   const getBack = () => {
-    navigate("/admin_landing");
+    navigate("/adminlanding");
   };
 
   return (
     <div>
       <div className="ct-form-create"></div>
+      <button className="bt-back" onClick={getBack}>
+        Back
+      </button>
       <div className="container py-5">
         <div className="row justify-content-center">
           <div className="col-lg-6">
@@ -74,7 +77,7 @@ function CreateChallenge() {
                       required
                     />
                   </div>
-                  {/* <span className="error-register">{ error.name }</span> */}
+                  <span className="error-register">{ error}</span>
 
                   <div className="form-group my-3">
                     <button type="submit" className="btnchll">
@@ -83,8 +86,7 @@ function CreateChallenge() {
                     <button
                       type="reset"
                       className="btnchll"
-                      onClick={handleReset}
-                    >
+                      onClick={handleReset}>
                       Clear
                     </button>
                   </div>

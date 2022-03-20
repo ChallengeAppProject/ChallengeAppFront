@@ -12,7 +12,7 @@ export function QuestionCard({ question }) {
       .getAnswersByQuestionID(id)
       .then((res) => setAnswers(res.data))
       .catch((error) => console.log(error.response));
-  },[id]);
+  },[question.id]);
 
   return (
     <div>

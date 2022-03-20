@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { ApiService } from "../../../Services/APIService";
 import { useNavigate, useParams } from "react-router-dom";
 import "./CreateQuestion.css";
+import { QuestionCard } from "../../Molecules/QuestionCard/QuestionCard";
 
 const initialForm = {
   challengeQuestion: "",
@@ -45,18 +46,19 @@ function CreateQuestion() {
     ApiService()
       .createQuestion(form, challengeId)
       .then((res) => {
-        alert(res.data);
+          alert( "New question created" );
+          navigate("/questions/" + `${res.data.id}` + "/answer");
         console.log(res);
         setError([]);
       })
       .catch(
         (error) => {
-          alert(`Error ${error}. Sorry, ${error}`);
+          alert(`Sorry, ${error}`);
           console.log(error.response);
           setError(error.response);
         },
         [challengeById.id]
-      );
+      );setForm(initialForm)
   };
 
   const getBack = () => {
@@ -69,7 +71,7 @@ function CreateQuestion() {
         <button className="bt-back" onClick={getBack}>
           Back
         </button>
-        <h2>Challenge {challenge.name}</h2>
+        <h2> {challenge.name} Challenge </h2>
       </div>
       <div className="container py-5">
         <div className="row justify-content-center">
@@ -116,7 +118,10 @@ function CreateQuestion() {
                     </button>
                   </div>
                 </form>
-              </div>
+                          </div>
+                              {/* <QuestionCard/> */}
+                    
+                          
             </div>
           </div>
         </div>
