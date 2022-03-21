@@ -64,6 +64,7 @@ function CreateAnswer() {
         console.log(res);
         alert("New answer created");
         setError([]);
+        setForm(initialForm);
       })
       .catch(
         (error) => {
@@ -72,7 +73,7 @@ function CreateAnswer() {
         },
         [questionById.id]
       );
-    setForm([]);
+
     // navigate( "/questions/" + `${ question.id }` + "/answer" ); No va :P
   };
   console.log(form);
@@ -108,7 +109,7 @@ function CreateAnswer() {
                       name="textAnswer"
                       placeholder="Write answer here"
                       onChange={handleChange}
-                      value={form.answerText}
+                      value={form.textAnswer}
                       className="form-control"
                       required
                     />
@@ -119,7 +120,7 @@ function CreateAnswer() {
                         name="correctAnswer"
                         onClick={handleChangeBoolean}
                         id="true"
-                        value={form.correctAnswer}
+                        value="1"
                       />
                       <label className="form-check-label">
                         Select this to create a TRUE answer
@@ -132,7 +133,7 @@ function CreateAnswer() {
                         name="correctAnswer"
                         onClick={handleChangeBoolean}
                         id="false"
-                        value={form.correctAnswer}
+                        value="0"
                       />
                       <label className="form-check-label">
                         Select this to create a FALSE answer
@@ -142,15 +143,14 @@ function CreateAnswer() {
                   <span className="error-register">{error}</span>
 
                   <div className="form-group my-3">
-                    <button
-                      type="submit"
-                      className="btnchll">
+                    <button type="submit" className="btnchll">
                       Create
                     </button>
                     <button
                       type="reset"
                       className="btnchll"
-                      onClick={handleReset}>
+                      onClick={handleReset}
+                    >
                       Clear
                     </button>
                   </div>
