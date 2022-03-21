@@ -30,6 +30,11 @@ export const ApiService = () => {
     const res = await axios.get(`${urlQuestions}/${id}/answers`);
     return res;
   };
+  //USER SERVICE
+  const postAnswersByQuestionId = async (id) => {
+    const res = await axios.post("/userQuestion/challenge/"+`${id}`);
+    console.log(res);
+  }
   //ADMIN SERVICE
   const createChallenge = async (data) => {
     const res = await axios.post(urlChallenges, data);

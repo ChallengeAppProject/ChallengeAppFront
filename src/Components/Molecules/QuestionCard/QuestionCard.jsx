@@ -7,12 +7,17 @@ export function QuestionCard({ question }) {
 
   let id = question.id;
 
+
   useEffect(() => {
     ApiService()
       .getAnswersByQuestionID(id)
       .then((res) => setAnswers(res.data))
       .catch((error) => console.log(error.response));
   },[question.id]);
+
+  function sendAnswers(){
+   alert(answers[0].textAnswer)
+  }
 
   return (
     <div>
@@ -27,7 +32,7 @@ export function QuestionCard({ question }) {
               </li>
             ))}
           </ul>
-          <button>Submit Answers</button>
+          <button onClick={sendAnswers}>Submit Answers</button>
         </form>
       </div>
     </div>
