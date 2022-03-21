@@ -11,15 +11,23 @@ export function QuestionList() {
 
   let challengeId = useParams();
 
+  console.log(challengeId.id);
+
+  //ApiService()
+  //.getChallengeById(challengeId)
+ 
+
   let navigate = useNavigate(); 
   const routeChange = () =>{ 
-    let path = "/totalScore"; 
+    const idParams = challengeId.id;
+
+    let path = `/challenges/${idParams}/questions/totalScore`; 
     navigate(path);
   }
 
   useEffect(() => {
     const paramsId = challengeId.id;
-    console.log(paramsId);
+    //console.log(paramsId);
     ApiService()
       .getQuestionsByChallengeID(paramsId).then((res) => setQuestions(res.data))
       .catch(error => console.log(error.response));

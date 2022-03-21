@@ -19,7 +19,7 @@ function Router() {
         <Route path="/challenges/:id/questions" element={<QuestionList />} />
         <Route path="/questions/:id/answers" element={<QuestionCard />} />
         <Route path="/adminlanding" element={<AdminLanding />} />
-        <Route path="/totalScore" element={<UserTotalScore />} />
+        <Route path="/challenges/:id/questions/totalScore" element={<UserTotalScore />} />
       </Routes>
     </BrowserRouter>
   );
