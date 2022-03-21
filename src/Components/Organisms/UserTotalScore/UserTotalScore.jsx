@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { ApiService } from "../../../Services/APIService";
 import { useParams } from "react-router-dom";
 
@@ -7,22 +7,27 @@ import { useParams } from "react-router-dom";
  export default function UserTotalScore() {
     const [scores, setScores] = useState([]);
   
-    let challengeId = useParams();
+   let challenge = useParams();
+   const challengeId = challenge.id;
+   
+   const getUserScore = useCallback(()=>{ApiService()
+    .getUserTotalScore( challengeId ).then( ( res ) => setScores( res.data) )
+     .catch( error => console.log( error.response ) );
+     
+},[challengeId]);
 
 
     useEffect(() => {
-        const IDchallenge = challengeId.id;
-      ApiService()
-        
-        .getUserTotalScore(IDchallenge).then((res) => setScores(res.data))
-        
-        .catch(error => console.log(error.response));
-
-        
-    },[]);
-  
+      getUserScore(); 
+     
+    },[challenge.id, getUserScore]);
+    console.log( scores );
     return (
-        <div className="">
+      <div className="">
+       <p> Name: {scores.user.userName}</p>
+       <p> Challenge: {scores.challenge.challengeName}</p>
+       <p> Correct answers: {scores.correctAnswers}</p>
+       <p> Incorrect answers: {scores.incorrectAnswers}</p>
      
       </div>
     );
