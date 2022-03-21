@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { ApiService } from "../../../Services/APIService";
 import { AnswerCard } from "../AnswerCard/AnswerCard";
+import { userAnswer } from "../AnswerCard/AnswerCard";
 
 export function QuestionCard({ question }) {
   const [answers, setAnswers] = useState([]);
@@ -17,8 +18,9 @@ export function QuestionCard({ question }) {
 
   function sendAnswers(){
     alert( answers[ 0 ].textAnswer );
-    let data={questionId: 1, challengeAnswerId:1};
-    let id =1;
+    let data={questionId: question.id, challengeAnswerId:userAnswer};
+    let id = question.challengeId;
+    console.log( data, id );
     ApiService()
       .postAnswersByQuestionId( id, data )
     
