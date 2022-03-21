@@ -15,6 +15,8 @@
 
 .welcomeTitle{
    background: rgb(255, 255, 255);
+   padding-bottom: 10px;
+   padding-top: 15px;
 }
 
 .challengeIndex{
