@@ -7,7 +7,7 @@ import House from "../../../Assets/House.png"
 class Navbar extends Component {
     render() {
         return (
-            <div className="navbar">
+            <div className="kuki">
                 <img className='logoUser' src={logoUser}></img>
                 <img className='ChallengeLogoNav' src={ChallengeLogo2}></img>
                 <img className='house' src={House}></img>

@@ -1,23 +1,24 @@
-.navbar {
-  width: 100%;
+.kuki {
+   width: 100%;
    display: flex;
+   flex-wrap: nowrap;
    justify-content: space-between;
-    background-color: rgba(18, 93, 152, 1);
+   background-color: rgba(18, 93, 152, 1);
     
 }
 .logoUser {
     margin-bottom: auto;
     margin-left: 2vh;
     margin-top: 1vh;
-    width: 8vh;
-    height: 8vh;   
+    width: 6vh;
+      
 
 }
 .ChallengeLogoNav {
     margin-bottom: auto;
     margin-top: 0.1vh;
-    width: 14vh;
-    height: 10vh;
+    width: 11vh;
+    
     background-color: transparent;
       
 }
@@ -25,12 +26,12 @@
     margin-bottom: auto;
     margin-right: 2vh;
     margin-top: 1vh;
-    width: 8vh;
-    height: 8vh;
+    width: 6vh;
+   
     background-color: transparent;
 }
 
 @media (max-width: 700px) {
-    
+   
     
 }
