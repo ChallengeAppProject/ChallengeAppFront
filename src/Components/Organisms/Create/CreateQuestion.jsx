@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ApiService } from "../../../Services/APIService";
 import { useNavigate, useParams } from "react-router-dom";
-import back from "../../../Assets/backArrow.png";
+import "./CreateQuestion.css";
+import { QuestionCard } from "../../Molecules/QuestionCard/QuestionCard";
+import CreateAnswer from "./CreateAnswer";
 
 const initialForm = {
   challengeQuestion: "",
@@ -9,13 +11,21 @@ const initialForm = {
 };
 
 function CreateQuestion() {
-  let challengeId = useParams();
-
+  const [challenge, setChallenge] = useState([]);
   const [form, setForm] = useState(initialForm);
-  /* const [error, setError] = useState([]); */
+  const [error, setError] = useState([]);
 
+  let challengeById = useParams();
   let navigate = useNavigate();
-  let api = ApiService();
+
+  useEffect(() => {
+    const challengeNew = challengeById.id;
+    ApiService()
+      .getChallengeById(challengeNew)
+      .then((res) => setChallenge(res.data))
+
+      .catch((error) => console.log(error.response));
+  }, [challengeById.id]);
 
   const handleChange = (e) => {
     e.persist();
@@ -27,49 +37,68 @@ function CreateQuestion() {
 
   const handleReset = (e) => {
     setForm(initialForm);
-    /* setError([]); */
+    setError([]);
   };
 
   const submitForm = (e) => {
     e.preventDefault();
+<<<<<<< HEAD
     const paramsId = challengeId.id;
     console.log(paramsId);
     api.createQuestion(form, paramsId).then((res) => {
         alert(res.data);
+=======
+    const challengeId = challengeById.id;
+
+    ApiService()
+      .createQuestion(form, challengeId)
+      .then((res) => {
+        alert("New question created");
+        navigate("/questions/" + `${res.data.id}` + "/answer");
+>>>>>>> dev
         console.log(res);
-        /* setError([]); */
-        navigate("/challenges");
+        setError([]);
       })
-      .catch((error) => {
-        alert(
-          `Error ${error.response.status}. Sorry, ${error.response.statusText}`
-        );
-        /* setError( error.response.data.msg );
-                console.log(error, error.name) */
-      },[paramsId]);
+      .catch(
+        (error) => {
+          alert(`Sorry, ${error}`);
+          console.log(error.response);
+          setError(error.response);
+        },
+        [challengeById.id]
+      );
+    setForm(initialForm);
   };
 
   const getBack = () => {
-    navigate("/challenges");
+    navigate("/create/challenge");
+  };
+
+  const addAnswers = () => {
+    return (
+      <div>
+        <CreateAnswer />
+      </div>
+    );
   };
 
   return (
     <div>
       <div className="ct-form-create">
-        <h3 className="txt-title">Create a new Question</h3>
         <button className="bt-back" onClick={getBack}>
-          <img className="ico-back" src={back} alt="back button" />
+          Back
         </button>
+        <h2> {challenge.name} Challenge </h2>
       </div>
       <div className="container py-5">
         <div className="row justify-content-center">
           <div className="col-lg-6">
             <div className="card">
-              <div className="card-header">
-                <h5 className="txt-title-form">
-                  Please fill the form for create a Question
-                </h5>
+              <div className="card-title">
+                <h3 className="txt-title">Create a Question</h3>
+                <p>Please fill the form to create a question</p>
               </div>
+
               <div className="card-body">
                 <form onSubmit={submitForm}>
                   <div className="form-group">
@@ -77,34 +106,42 @@ function CreateQuestion() {
                     <input
                       type="text"
                       name="challengeQuestion"
+                      placeholder="Write question here"
                       onChange={handleChange}
                       value={form.challengeQuestion}
                       className="form-control"
+                      required
                     />
+                    <label className="txt-label-form">Image</label>
                     <input
                       type="text"
                       name="imgUrl"
+                      placeholder="Please, paste an image url direction here"
                       onChange={handleChange}
                       value={form.imgUrl}
                       className="form-control"
                     />
                   </div>
-                  {/* <span className="error-register">{ error.name }</span> */}
+                  <span className="error-register">{error}</span>
 
                   <div className="form-group my-3">
-                    <button type="submit" className="bt-form-send">
+                    <button type="submit" className="btnchll">
                       Create
                     </button>
                     <button
                       type="reset"
-                      className="bt-form-reset"
+                      className="btnchll"
                       onClick={handleReset}>
-                      Cancel
+                      Clear
                     </button>
                   </div>
                 </form>
               </div>
+              {/* <QuestionCard/> */}
             </div>
+            <button className="bt-addAnswers" onClick={addAnswers}>
+              Add Answers
+            </button>
           </div>
         </div>
       </div>

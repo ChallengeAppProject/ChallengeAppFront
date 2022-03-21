@@ -1,0 +1,12 @@
+.card-container {
+  background-color: rgba(18, 93, 152, 1);
+  display: flex;
+  width: 40%;
+  text-decoration: none;
+}
+
+.challenge-container {
+  text-decoration: none;
+  color: white;
+  background-color: rgba(18, 93, 152, 1);
+}

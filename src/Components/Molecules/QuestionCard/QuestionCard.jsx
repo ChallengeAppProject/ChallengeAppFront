@@ -1,18 +1,30 @@
 import { useState, useEffect } from "react";
 import { ApiService } from "../../../Services/APIService";
 import { AnswerCard } from "../AnswerCard/AnswerCard";
+import { userAnswer } from "../AnswerCard/AnswerCard";
 
 export function QuestionCard({ question }) {
   const [answers, setAnswers] = useState([]);
 
   let id = question.id;
 
+
   useEffect(() => {
     ApiService()
       .getAnswersByQuestionID(id)
       .then((res) => setAnswers(res.data))
       .catch((error) => console.log(error.response));
-  },[id]);
+  },[question.id]);
+
+  function sendAnswers(){
+    alert( answers[ 0 ].textAnswer );
+    let data={questionId: question.id, challengeAnswerId:userAnswer};
+    let id = question.challengeId;
+    console.log( data, id );
+    ApiService()
+      .postAnswersByQuestionId( id, data )
+    
+  }
 
   return (
     <div>
@@ -27,7 +39,7 @@ export function QuestionCard({ question }) {
               </li>
             ))}
           </ul>
-          <button>Submit Answers</button>
+          <button onClick={sendAnswers}>Submit Answers</button>
         </form>
       </div>
     </div>

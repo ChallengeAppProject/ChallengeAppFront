@@ -4,15 +4,30 @@ import { QuestionCard } from "../../Molecules/QuestionCard/QuestionCard";
 import { useParams } from "react-router-dom";
 import Navbar from "../../Molecules/Header/Navbar";
 import Footer from "../../Molecules/Footer/Footer";
+import { useNavigate } from "react-router-dom";
 
 export function QuestionList() {
   const [questions, setQuestions] = useState([]);
 
   let challengeId = useParams();
 
+  console.log(challengeId.id);
+
+  //ApiService()
+  //.getChallengeById(challengeId)
+ 
+
+  let navigate = useNavigate(); 
+  const routeChange = () =>{ 
+    const idParams = challengeId.id;
+
+    let path = `/challenges/${idParams}/questions/totalScore`; 
+    navigate(path);
+  }
+
   useEffect(() => {
     const paramsId = challengeId.id;
-    console.log(paramsId);
+    //console.log(paramsId);
     ApiService()
       .getQuestionsByChallengeID(paramsId).then((res) => setQuestions(res.data))
       .catch(error => console.log(error.response));
@@ -28,6 +43,8 @@ export function QuestionList() {
           <QuestionCard question={question} />
         </li>
       ))}
+
+      <button onClick={routeChange}>Get total Score</button>
     
  
     <Footer/>
