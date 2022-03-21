@@ -52,6 +52,11 @@ export const ApiService = () => {
 
   const getUserTotalScore = async (id) => {
     const res = await axios.get(urlUserScore+`/${id}`);
+    console.log(res.data.user.userName)
+    console.log(res.data.challenge.challengeName)
+    console.log(res.data.correctAnswers)
+    console.log(res.data.incorrectAnswers)
+    console.log(res.data)
     return res;
   };
 
