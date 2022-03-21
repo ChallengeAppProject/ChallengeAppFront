@@ -16,7 +16,12 @@ export function QuestionCard({ question }) {
   },[question.id]);
 
   function sendAnswers(){
-   alert(answers[0].textAnswer)
+    alert( answers[ 0 ].textAnswer );
+    let data={questionId: 1, challengeAnswerId:1};
+    let id =1;
+    ApiService()
+      .postAnswersByQuestionId( id, data )
+    
   }
 
   return (
