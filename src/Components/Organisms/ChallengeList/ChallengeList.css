@@ -13,10 +13,12 @@
 }
 
 .presentation {
+  background-repeat: no-repeat;
   display: flex;
   float: left;
-  width: 50%;
+  width: 40%;
   height: 92vh;
+  margin-left: 10%;
 }
 
 .challengeIndexContainer {

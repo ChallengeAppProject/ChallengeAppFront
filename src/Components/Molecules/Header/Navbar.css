@@ -1,7 +1,6 @@
 .ChallengeLogoNav {
-  margin-bottom: 3vh;
-  margin-top: 0.1vh;
-  width: 11vh;
+  margin: 5px 0 5px 10px;
+  width: 15vh;
 
   background-color: transparent;
 }

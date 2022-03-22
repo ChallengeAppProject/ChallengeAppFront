@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { ApiService } from "../../../Services/APIService";
 import { ChallengeCard } from "../../Molecules/ChallengeCard/ChallengeCard";
 import "./ChallengeList.css";
-import background from "../../../Assets/ChallengeAppLogo.png";
+import background from "../../../Assets/Education.gif";
 
 export function ChallengeList() {
   const [challenges, setChallenge] = useState([]);
