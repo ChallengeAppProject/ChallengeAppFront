@@ -11,7 +11,7 @@ export function QuestionList() {
 
   let challengeId = useParams();
 
-  console.log(challengeId.id);
+
 
   //ApiService()
   //.getChallengeById(challengeId)

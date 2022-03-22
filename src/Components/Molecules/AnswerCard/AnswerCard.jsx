@@ -7,12 +7,10 @@ export function AnswerCard ( { answer, handleAnswer} )
       <input
         type="radio"
         id={answer.id}
-        onClick={handleAnswer}
+        onClick={handleAnswer(answer.id)}
         name={answer.questionId}
         value={answer.questionId}></input>
       {answer.textAnswer}
     </div>
   );
 }
-
-export let userAnswer;
