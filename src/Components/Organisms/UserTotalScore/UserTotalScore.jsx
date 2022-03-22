@@ -4,25 +4,40 @@ import { useParams } from "react-router-dom";
 
  
  
- export default function UserTotalScore() {
+ export function UserTotalScore() {
     const [scores, setScores] = useState([]);
   
-    let challengeId = useParams();
-
+   let challenge = useParams();
+   const challengeId = challenge.id;
+   const [dataIsOk, setdataIsOk] = useState(false);
 
     useEffect(() => {
-        const IDchallenge = challengeId.id;
       ApiService()
-        .getUserTotalScore(IDchallenge).then((res) => setScores(res.data))
-        .catch(error => console.log(error.response));
+        .getUserTotalScore( challengeId ).then( ( res ) => {
+          setScores( res.data)
+        setdataIsOk(true)}
+         )
+        .catch( error => console.log( error.response ) );
+         
     },[]);
-  
+
+    console.log(scores)
     return (
-      <div>
-          User: 
-          <br></br>
-          En el challenge de X has acertado Y preguntas y has tenido Z fallos
+      
+      <div className="">
+  {dataIsOk ? 
+  <div>
+         <p> Name: {scores.user.userName}</p>
+        <p> Challenge: {scores.challenge.challengeName}</p>
+        <p> Correct answers: {scores.correctAnswers}</p>
+        <p> Incorrect answers: {scores.incorrectAnswers}</p>
       </div>
+      :
+      <p>"loading"</p>
+      } 
+      </div> 
     );
   }
+
+  export default UserTotalScore;
   
