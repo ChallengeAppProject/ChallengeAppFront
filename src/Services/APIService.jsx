@@ -7,6 +7,8 @@ export const ApiService = () => {
   let baseUrl = "http://localhost:8080";
   let urlChallenges = "/challenges";
   let urlQuestions = "/questions";
+  let urlUserScore = "/userQuestion/challenge"
+
 
   const get = async () => {
     const res = await axios.get(baseUrl + urlChallenges);
@@ -30,6 +32,11 @@ export const ApiService = () => {
     const res = await axios.get(`${urlQuestions}/${id}/answers`);
     return res;
   };
+  //USER SERVICE
+  const postAnswersByQuestionId = async (id, data) => {
+    const res = await axios.post("/userQuestion/challenge/"+`${id}`, data);
+    console.log(res);
+  }
   //ADMIN SERVICE
   const createChallenge = async (data) => {
     const res = await axios.post(urlChallenges, data);
@@ -48,6 +55,11 @@ export const ApiService = () => {
     return res;
   };
 
+  const getUserTotalScore = async (id) => {
+    const res = await axios.get(urlUserScore+`/${id}`);
+    return res;
+  };
+
   return {
     get,
     getChallengeById,
@@ -57,6 +69,8 @@ export const ApiService = () => {
     createChallenge,
     createQuestion,
     createAnswer,
+    getUserTotalScore,
+    postAnswersByQuestionId
   };
 };
 

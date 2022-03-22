@@ -1,16 +1,16 @@
 import { Component } from "react";
 import "./Navbar.css";
-import logo from "../../../Assets/ChallengeApp.png";
+import logoUser from "../../../Assets/logoUser.png";
+import ChallengeLogo2 from "../../../Assets/LogoChallengeAppBLANCO.png";
+import House from "../../../Assets/House.png";
 
 class Navbar extends Component {
   render() {
     return (
-      <div className="header">
-        <img
-          className="logo"
-          src={logo}
-          href="http://localhost:3000/challenges"
-        ></img>
+      <div className="NavContainer">
+        {/* <img className='logoUser' src={logoUser}></img> */}
+        <img className="ChallengeLogoNav" src={ChallengeLogo2}></img>
+        {/* <img className='house' src={House}></img> */}
       </div>
     );
   }

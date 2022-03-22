@@ -1,6 +1,6 @@
 import "./App.css";
-import Navbar from "./Components/Molecules/Header/Navbar";
-import { ChallengeList } from "./Components/Organisms/ChallengeList/ChallengeList";
+import Navbar from "./Components/Molecules/Header/Navbar.jsx";
+import { ChallengeList } from "./Components/Organisms/ChallengeList/ChallengeList.jsx";
 import Footer from "./Components/Molecules/Footer/Footer.jsx";
 
 function App() {

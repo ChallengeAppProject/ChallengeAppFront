@@ -14,12 +14,15 @@ export function ChallengeList() {
   }, []);
 
   return (
-    <ul>
-      {challenges.map((challenge, index) => (
-        <li className="card w-25" key={index}>
-          <ChallengeCard challenge={challenge} />
-        </li>
-      ))}
-    </ul>
+    <div>
+      <h1 className="welcomeTitle">Welcome to ChallengeApp</h1>
+      <ul className="challengeIndexContainer">
+        {challenges.map((challenge, index) => (
+          <li className="card w-25" key={index}>
+            <ChallengeCard challenge={challenge} />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
