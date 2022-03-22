@@ -11,7 +11,9 @@ export function QuestionCard({ question }) {
     console.log( e.target.value );
     console.log( e.target.name );
     setUserAnswer( { questionId: e.target.name, challengeAnswerId: e.target.value } )
-    setUserAnswersList([...userAnswersList,{ questionId: e.target.name, challengeAnswerId: e.target.value }]) 
+    console.log(userAnswer)
+    setUserAnswersList( [ ...userAnswersList, { questionId: e.target.name, challengeAnswerId: e.target.value } ] ) 
+    console.log(userAnswersList)
   };
 
   useEffect(() => {
