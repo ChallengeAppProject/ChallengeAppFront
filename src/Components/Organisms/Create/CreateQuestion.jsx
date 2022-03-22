@@ -67,14 +67,6 @@ function CreateQuestion() {
     navigate("/create/challenge");
   };
 
-  const addAnswers = () => {
-    return (
-      <div>
-        <CreateAnswer />
-      </div>
-    );
-  };
-
   return (
     <div>
       <div className="ct-form-create">
@@ -130,11 +122,7 @@ function CreateQuestion() {
                   </div>
                 </form>
               </div>
-              {/* <QuestionCard/> */}
             </div>
-            <button className="bt-addAnswers" onClick={addAnswers}>
-              Add Answers
-            </button>
           </div>
         </div>
       </div>
