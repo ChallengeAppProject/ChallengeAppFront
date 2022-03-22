@@ -1,5 +1,35 @@
-ul {
+.welcome-title {
+  display: block;
+  position: relative;
+  color: #28292b;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding-top: 10px;
+  padding-left: 40px;
+}
+
+.welcome-text {
+  display: block;
+  position: relative;
+}
+
+.presentation {
+  display: flex;
+  float: left;
+  width: 50%;
+  height: 92vh;
+}
+
+.challengeIndexContainer {
+  align-items: center;
+  width: 50%;
+  height: 100%;
   margin-top: 20px !important;
   display: flex;
+  float: right;
   flex-direction: column;
+  margin-bottom: 10%;
+}
+
+.card-challenge {
+  list-style: none;
 }
