@@ -5,11 +5,13 @@ import { AnswerCard } from "../AnswerCard/AnswerCard";
 export function QuestionCard({ question }) {
   const [ answers, setAnswers ] = useState( [] );
   const [ userAnswer, setUserAnswer ] = useState( { questionId: 1, challengeAnswerId: 1 } );
+  const [ userAnswersList, setUserAnswersList ] = useState( [] );
   
   const handleChangeAnswer = (e) => {
     console.log( e.target.value );
     console.log( e.target.name );
-    setUserAnswer( {questionId:e.target.name, challengeAnswerId: e.target.value } )
+    setUserAnswer( { questionId: e.target.name, challengeAnswerId: e.target.value } )
+    setUserAnswersList([...userAnswersList,{ questionId: e.target.name, challengeAnswerId: e.target.value }]) 
   };
 
   useEffect(() => {
@@ -21,12 +23,12 @@ export function QuestionCard({ question }) {
 
   function sendAnswers ()
   {
-
-  
-    let data = userAnswer;
     let id = question.challengeId;
-    console.log(data, id);
-    ApiService().postAnswersByQuestionId(id, data);
+  userAnswersList.forEach(element => {
+    let data = element;
+   /*  ApiService().postAnswersByQuestionId( id, data ); */ 
+    console.log(userAnswersList)
+  });
   }
 
   return (
@@ -50,9 +52,9 @@ export function QuestionCard({ question }) {
               </li>
             ))}
           </ul>
-          <button onClick={sendAnswers}>Submit Answers</button>
         </form>
       </div>
+          <button onClick={sendAnswers}>Submit Answers</button>
     </div>
   );
 }
