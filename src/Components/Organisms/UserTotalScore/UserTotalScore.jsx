@@ -9,24 +9,33 @@ import { useParams } from "react-router-dom";
   
    let challenge = useParams();
    const challengeId = challenge.id;
+   const [dataIsOk, setdataIsOk] = useState(false);
 
     useEffect(() => {
       ApiService()
-        .getUserTotalScore( challengeId ).then( ( res ) => setScores( res.data) )
+        .getUserTotalScore( challengeId ).then( ( res ) => {
+          setScores( res.data)
+        setdataIsOk(true)}
+         )
         .catch( error => console.log( error.response ) );
          
-    },[challengeId]);
+    },[]);
 
     console.log(scores)
     return (
+      
       <div className="">
-
-        {/* <p> Name: {scores.user.userName}</p>
+  {dataIsOk ? 
+  <div>
+         <p> Name: {scores.user.userName}</p>
         <p> Challenge: {scores.challenge.challengeName}</p>
         <p> Correct answers: {scores.correctAnswers}</p>
         <p> Incorrect answers: {scores.incorrectAnswers}</p>
-      */}
       </div>
+      :
+      <p>"loading"</p>
+      } 
+      </div> 
     );
   }
 
