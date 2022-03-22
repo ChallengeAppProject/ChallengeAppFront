@@ -6,7 +6,7 @@ import { QuestionList } from "./Organisms/QuestionList/QuestionList";
 import { QuestionCard } from "./Molecules/QuestionCard/QuestionCard";
 import CreateQuestions from "../Views/Pages/Admin/CreateQuestions";
 import CreateAnswers from "../Views/Pages/Admin/CreateAnswers";
-import AdminLanding from "../Views/AdminLanding";
+import AdminLanding from "../Views/Pages/Admin/AdminLanding";
 
 function Router() {
   return (
@@ -17,7 +17,7 @@ function Router() {
         <Route path="/challenges/:id/question" element={<CreateQuestions />} />
         <Route path="/questions/:id/answer" element={<CreateAnswers />} />
         <Route path="/challenges/:id/questions" element={<QuestionList />} />
-        <Route path="/questions/:id/answers" element={ <QuestionCard /> } />
+        <Route path="/questions/:id/answers" element={<QuestionCard />} />
         <Route path="/adminlanding" element={<AdminLanding />} />
       </Routes>
     </BrowserRouter>

@@ -1,5 +1,5 @@
-import Navbar from "../Components/Molecules/Header/Navbar";
-import Footer from "../Components/Molecules/Footer/Footer";
+import Navbar from "../../../Components/Molecules/Header/Navbar";
+import Footer from "../../../Components/Molecules/Footer/Footer";
 import { Link } from "react-router-dom";
 
 function AdminLanding() {
@@ -10,7 +10,7 @@ function AdminLanding() {
         <Link to="/create/challenge" className="challenge-container">
           CREATE CHALLENGE
         </Link>
-        <br/>
+        <br />
         <Link to="/challenges" className="challenge-container">
           VIEWCHALLENGES
         </Link>

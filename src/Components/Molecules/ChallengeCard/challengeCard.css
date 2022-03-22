@@ -1,12 +1,13 @@
-.card-container {
-  background-color: rgba(18, 93, 152, 1);
-  display: flex;
-  width: 40%;
-  text-decoration: none;
-}
-
 .challenge-container {
   text-decoration: none;
-  color: white;
-  background-color: rgba(18, 93, 152, 1);
+  color: #125d98;
+  font-weight: bold;
+}
+
+.card-container {
+  height: 60px;
+  background-color: #cccbca2d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -1,16 +1,5 @@
 ul {
+  margin-top: 20px !important;
   display: flex;
-  float: left;
-}
-
-li {
-  list-style-type: none;
-  text-decoration: none;
-  margin: 2%;
-}
-.challengeLogo {
-  display: flex;
-  width: 400px;
-  height: 400px;
-  float: left;
+  flex-direction: column;
 }
