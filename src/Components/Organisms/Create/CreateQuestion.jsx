@@ -42,12 +42,6 @@ function CreateQuestion() {
 
   const submitForm = (e) => {
     e.preventDefault();
-<<<<<<< HEAD
-    const paramsId = challengeId.id;
-    console.log(paramsId);
-    api.createQuestion(form, paramsId).then((res) => {
-        alert(res.data);
-=======
     const challengeId = challengeById.id;
 
     ApiService()
@@ -55,7 +49,6 @@ function CreateQuestion() {
       .then((res) => {
         alert("New question created");
         navigate("/questions/" + `${res.data.id}` + "/answer");
->>>>>>> dev
         console.log(res);
         setError([]);
       })
