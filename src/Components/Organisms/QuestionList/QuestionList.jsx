@@ -11,33 +11,25 @@ export function QuestionList() {
 
   let challengeId = useParams();
 
-  console.log(challengeId.id);
-
-  //ApiService()
-  //.getChallengeById(challengeId)
- 
-
-  let navigate = useNavigate(); 
-  const routeChange = () =>{ 
+  let navigate = useNavigate();
+  const routeChange = () => {
     const idParams = challengeId.id;
-
-    let path = `/challenges/${idParams}/questions/totalScore`; 
+    let path = `/challenges/${idParams}/questions/totalScore`;
     navigate(path);
-  }
+  };
 
   useEffect(() => {
     const paramsId = challengeId.id;
-    //console.log(paramsId);
     ApiService()
-      .getQuestionsByChallengeID(paramsId).then((res) => setQuestions(res.data))
-      .catch(error => console.log(error.response));
-  },[challengeId.id]);
+      .getQuestionsByChallengeID(paramsId)
+      .then((res) => setQuestions(res.data))
+      .catch((error) => console.log(error.response));
+  }, [challengeId.id]);
 
   return (
     <div>
-      <Navbar/>
-  
-    
+      <Navbar />
+
       {questions.map((question, index) => (
         <li key={index}>
           <QuestionCard question={question} />
@@ -45,9 +37,8 @@ export function QuestionList() {
       ))}
 
       <button onClick={routeChange}>Get total Score</button>
-    
- 
-    <Footer/>
+
+      <Footer />
     </div>
   );
 }

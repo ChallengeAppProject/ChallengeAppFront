@@ -1,15 +1,13 @@
-export function AnswerCard({ answer }) {
-  let userAnswer;
-  const handleChangeAnswer = () => {
-    userAnswer = answer.id;
-    console.log(userAnswer);
-  };
+
+export function AnswerCard ( { answer, handleAnswer} )
+{
+ 
   return (
     <div className="car-container">
       <input
         type="radio"
         id={answer.id}
-        onSelect={handleChangeAnswer}
+        onClick={handleAnswer}
         name={answer.questionId}
         value={answer.questionId}></input>
       {answer.textAnswer}

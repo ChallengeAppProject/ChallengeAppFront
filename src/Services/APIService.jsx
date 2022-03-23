@@ -35,7 +35,8 @@ export const ApiService = () => {
   //USER SERVICE
   const postAnswersByQuestionId = async (id, data) => {
     const res = await axios.post("/userQuestion/challenge/"+`${id}`, data);
-    console.log(res);
+    console.log( res );
+    return res;
   }
   //ADMIN SERVICE
   const createChallenge = async (data) => {
@@ -56,7 +57,12 @@ export const ApiService = () => {
   };
 
   const getUserTotalScore = async (id) => {
-    const res = await axios.get(urlUserScore+`/${id}`);
+    const res = await axios.get(`${urlUserScore}/${id}`);
+    // console.log(res.data.user.userName)
+    // console.log(res.data.challenge.challengeName)
+    // console.log(res.data.correctAnswers)
+    // console.log(res.data.incorrectAnswers)
+    // console.log(res.data)
     return res;
   };
 
