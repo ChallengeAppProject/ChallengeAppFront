@@ -15,7 +15,7 @@ function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/home" element={<Home/>} />
+        <Route path="/" element={<Home />} />
         <Route path="/challenges" element={<App />} />
         <Route path="/create/challenge" element={<CreateChallenges />} />
         <Route path="/challenges/:id/question" element={<CreateQuestions />} />
@@ -23,7 +23,10 @@ function Router() {
         <Route path="/challenges/:id/questions" element={<QuestionList />} />
         <Route path="/questions/:id/answers" element={<QuestionCard />} />
         <Route path="/adminlanding" element={<AdminLanding />} />
-        <Route path="/challenges/:id/questions/totalScore" element={<Results />} />
+        <Route
+          path="/challenges/:id/questions/totalScore"
+          element={<Results />}
+        />
       </Routes>
     </BrowserRouter>
   );

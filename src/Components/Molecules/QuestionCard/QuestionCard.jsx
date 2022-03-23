@@ -1,21 +1,19 @@
 import { useState, useEffect } from "react";
 import { ApiService } from "../../../Services/APIService";
 import { AnswerCard } from "../AnswerCard/AnswerCard";
+import "./QuestionCard.css";
 
 export function QuestionCard({ question }) {
   const [answers, setAnswers] = useState([]);
 
   let id = question.id;
   let userAnswer;
-  function handleChangeAnswer(){
-    
-       
-        userAnswer = answers[0].answerId;
-      
-      console.log(userAnswer);
-      return userAnswer;
-    }
-  
+  function handleChangeAnswer() {
+    userAnswer = answers[0].answerId;
+
+    console.log(userAnswer);
+    return userAnswer;
+  }
 
   useEffect(() => {
     ApiService()
@@ -34,21 +32,20 @@ export function QuestionCard({ question }) {
 
   return (
     <div>
-      <div className="car-container">
+      <div className="container">
         <div>{question.challengeQuestion}</div>
 
         <form>
           <ul>
             {answers.map((answer, index) => (
               <li key={index}>
-                <AnswerCard
-                  answer={answer}
-                  handleAnswer={handleChangeAnswer}
-                />
+                <AnswerCard answer={answer} handleAnswer={handleChangeAnswer} />
               </li>
             ))}
           </ul>
-          <button onClick={sendAnswers}>Submit Answers</button>
+          <button className="bt-back" onClick={sendAnswers}>
+            Submit Answer
+          </button>
         </form>
       </div>
     </div>

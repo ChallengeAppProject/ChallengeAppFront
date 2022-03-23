@@ -1,5 +1,5 @@
-
 .NavContainer {
+  height: 5rem;
   display: flex;
   justify-content: space-between;
   padding-block: 10px;
@@ -8,8 +8,7 @@
 }
 
 .ChallengeLogoNav {
-    margin-left: 5vw;
-    display: flex;
-    background-color: transparent;
-
+  margin-left: 5vw;
+  display: flex;
+  background-color: transparent;
 }

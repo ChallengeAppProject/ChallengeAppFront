@@ -29,15 +29,17 @@ export function QuestionList() {
   return (
     <div>
       <Navbar />
+      <div className="container">
+        {questions.map((question, index) => (
+          <li className="card w-75 shadow p-3 mb-5 bg-body rounded" key={index}>
+            <QuestionCard question={question} />
+          </li>
+        ))}
 
-      {questions.map((question, index) => (
-        <li key={index}>
-          <QuestionCard question={question} />
-        </li>
-      ))}
-
-      <button onClick={routeChange}>Get total Score</button>
-
+        <button className="btnchll" onClick={routeChange}>
+          Get total Score
+        </button>
+      </div>
       <Footer />
     </div>
   );
