@@ -1,3 +1,8 @@
+.createQuestionContainer {
+  width: 100%;
+  height: 100%;
+}
+
 .ct-form-create {
   text-align: center;
   color: #125d98;

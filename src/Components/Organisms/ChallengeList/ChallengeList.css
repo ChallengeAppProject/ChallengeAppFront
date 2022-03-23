@@ -1,16 +1,28 @@
-ul {
+.mainContainer {
+  width: 100%;
+  height: 100%;
   display: flex;
-  float: left;
+  flex-direction: column;
+  
+  justify-content: center;
 }
 
-li {
-  list-style-type: none;
-  text-decoration: none;
-  margin: 2%;
+.welcomeTitle {
+color: #125d98;
+
+text-align: center;
 }
-.challengeLogo {
+
+.cardChallenge {
+  list-style:none;
+  margin-right: 232px; 
+}
+.challengeIndexContainer{
+  margin-left: 6vh;
+  
+}
+/* ul {
+  margin-top: 20px !important;
   display: flex;
-  width: 400px;
-  height: 400px;
-  float: left;
-}
+  flex-direction: column;
+} */

@@ -68,7 +68,7 @@ function CreateQuestion() {
   };
 
   return (
-    <div>
+    <div className="createQuestionContainer">
       <div className="ct-form-create">
         <button className="bt-back" onClick={getBack}>
           Back
@@ -116,7 +116,8 @@ function CreateQuestion() {
                     <button
                       type="reset"
                       className="btnchll"
-                      onClick={handleReset}>
+                      onClick={handleReset}
+                    >
                       Clear
                     </button>
                   </div>

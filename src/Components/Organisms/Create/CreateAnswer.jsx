@@ -85,8 +85,8 @@ function CreateAnswer() {
   return (
     <div>
       <div className="ct-form-create">
-        <button className="bt-back" onClick={getBack}>
-          Back
+        <button className="bt-back-new" onClick={getBack}>
+          Create a new question
         </button>
         <h2>Challenge: {challenge.name}</h2>
         <h2>Question: {question.challengeQuestion}</h2>

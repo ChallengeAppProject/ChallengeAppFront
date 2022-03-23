@@ -1,12 +1,15 @@
 import { Component } from "react";
 import "./Navbar.css";
-import logoUser from "../../../Assets/logoUser.png";
+import ChallengeLogo2 from "../../../Assets/LogoChallengeAppBLANCO.png";
+
 
 class Navbar extends Component {
   render() {
     return (
-      <div className="navbar">
-        <img className="logoUser" src={logoUser}></img>
+      <div className="NavContainer">
+       <a href="/challenges">
+       <img  className="ChallengeLogoNav" src={ChallengeLogo2} alt="" width="20%"/>
+       </a>
       </div>
     );
   }
