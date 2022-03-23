@@ -3,12 +3,12 @@
     height: 100%;
    
 
-    /* background: linear-gradient(0deg, #23a0d2, #9ed1f7, white); */
+    background: linear-gradient(0deg, #23a0d2, #9ed1f7, white);
    opacity: 0.9;
 }
 
 .logoHome {
-margin-bottom: -80px;
+margin-bottom: -15vh;
 }
 
 .blogPostBro{
