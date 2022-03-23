@@ -116,7 +116,8 @@ function CreateQuestion() {
                     <button
                       type="reset"
                       className="btnchll"
-                      onClick={handleReset}>
+                      onClick={handleReset}
+                    >
                       Clear
                     </button>
                   </div>
