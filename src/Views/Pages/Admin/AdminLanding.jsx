@@ -1,19 +1,20 @@
 import Navbar from "../../../Components/Molecules/Header/Navbar";
 import Footer from "../../../Components/Molecules/Footer/Footer";
 import { Link } from "react-router-dom";
-
+import "./AdminLanding.css";
+import {ChallengeList} from "./../../../Components/Organisms/ChallengeList/ChallengeList";
 function AdminLanding() {
   return (
     <div className="App">
       <Navbar />
       <div className="container">
-        <Link to="/create/challenge" className="challenge-container">
-          CREATE CHALLENGE
+      <div className="form-group my-3">
+       
+        <ChallengeList/>
+        <Link to="/create/challenge" className="btnchll">
+          Create Challenge
         </Link>
-        <br />
-        <Link to="/challenges" className="challenge-container">
-          VIEWCHALLENGES
-        </Link>
+        </div>
       </div>
       <Footer />
     </div>
