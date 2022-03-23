@@ -1,5 +1,28 @@
-ul {
+.mainContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: center;
+}
+
+.welcomeTitle {
+color: #125d98;
+
+text-align: center;
+}
+
+.cardChallenge {
+  list-style:none;
+  margin-right: 232px; 
+}
+.challengeIndexContainer{
+  margin-left: 6vh;
+  
+}
+/* ul {
   margin-top: 20px !important;
   display: flex;
   flex-direction: column;
-}
+} */

@@ -1,37 +1,15 @@
-.ChallengeLogoNav {
-  margin-bottom: 3vh;
-  margin-top: 0.1vh;
-  width: 11vh;
-
-  background-color: transparent;
-}
-/* .house{
-    margin-bottom: auto;
-    margin-right: 2vh;
-    margin-top: 1vh;
-    width: 6vh;
-   
-    background-color: transparent;
-} */
 
 .NavContainer {
-  /* width: 100%;
-   height: 10%; */
-  /* bottom: 0; */
   display: flex;
-  flex-wrap: nowrap;
   justify-content: space-between;
-  /* background-color: rgba(18, 93, 152, 1); */
-
+  padding-block: 10px;
   background: linear-gradient(0deg, #3c8dad, #125d98);
   opacity: 0.9;
 }
-/* .logoUser {
-    margin-bottom: auto;
-    margin-left: 2vh;
-    margin-top: 1vh;
-    width: 6vh;
-} */
 
-@media (max-width: 700px) {
+.ChallengeLogoNav {
+    margin-left: 5vw;
+    display: flex;
+    background-color: transparent;
+
 }

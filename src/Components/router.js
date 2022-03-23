@@ -9,11 +9,13 @@ import CreateAnswers from "../Views/Pages/Admin/CreateAnswers";
 import AdminLanding from "../Views/Pages/Admin/AdminLanding";
 import UserTotalScore from "./Organisms/UserTotalScore/UserTotalScore";
 import Results from "../Views/Results";
+import Home from "../Views/Home";
 
 function Router() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/home" element={<Home/>} />
         <Route path="/challenges" element={<App />} />
         <Route path="/create/challenge" element={<CreateChallenges />} />
         <Route path="/challenges/:id/question" element={<CreateQuestions />} />

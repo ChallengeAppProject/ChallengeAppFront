@@ -51,7 +51,7 @@ function CreateChallenge() {
   };
 
   return (
-    <div>
+    <div className="createChallengeContainer">
       <div className="ct-form-create"></div>
       <button className="bt-back" onClick={getBack}>
         Back

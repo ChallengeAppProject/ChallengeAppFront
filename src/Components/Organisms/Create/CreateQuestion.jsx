@@ -68,7 +68,7 @@ function CreateQuestion() {
   };
 
   return (
-    <div>
+    <div className="createQuestionContainer">
       <div className="ct-form-create">
         <button className="bt-back" onClick={getBack}>
           Back
