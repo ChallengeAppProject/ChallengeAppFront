@@ -1,19 +1,19 @@
 import { useState, useEffect } from "react";
 import { ApiService } from "../../../Services/APIService";
-import { AnswerCard } from "../AnswerCard/AnswerCard";
 
 export function QuestionCard({ question }) {
-  const [ answers, setAnswers ] = useState( [] );
-  const [ userAnswer, setUserAnswer ] = useState( { questionId: 1, challengeAnswerId: 1 } );
-  const [ userAnswersList, setUserAnswersList ] = useState( [] );
-  
+  const [answers, setAnswers] = useState([]);
+  const [userAnswer, setUserAnswer] = useState({
+    questionId: 1,
+    challengeAnswerId: 1,
+  });
+  const [dataIsOk, setDataIsOk] = useState(false);
+
   const handleChangeAnswer = (e) => {
-    console.log( e.target.value );
-    console.log( e.target.name );
-    setUserAnswer( { questionId: e.target.name, challengeAnswerId: e.target.value } )
-    console.log(userAnswer)
-    setUserAnswersList( [ ...userAnswersList, { questionId: e.target.name, challengeAnswerId: e.target.value } ] ) 
-    console.log(userAnswersList)
+    setUserAnswer({
+      questionId: e.target.name,
+      challengeAnswerId: e.target.value,
+    });
   };
 
   useEffect(() => {
@@ -23,14 +23,16 @@ export function QuestionCard({ question }) {
       .catch((error) => console.log(error.response));
   }, [question]);
 
-  function sendAnswers ()
-  {
+  function sendAnswer(event) {
     let id = question.challengeId;
-  userAnswersList.forEach(element => {
-    let data = element;
-   /*  ApiService().postAnswersByQuestionId( id, data ); */ 
-    console.log(userAnswersList)
-  });
+    let data = userAnswer;
+    ApiService().postAnswersByQuestionId(id, data);
+    setDataIsOk(true);
+    event.preventDefault();
+  }
+
+  function preventDefault(event) {
+    event.preventDefault();
   }
 
   return (
@@ -46,7 +48,7 @@ export function QuestionCard({ question }) {
                   <input
                     type="radio"
                     id={question.id}
-                    onClick={handleChangeAnswer }
+                    onClick={handleChangeAnswer}
                     name={answer.questionId}
                     value={answer.answerId}></input>
                   {answer.textAnswer}
@@ -54,9 +56,20 @@ export function QuestionCard({ question }) {
               </li>
             ))}
           </ul>
+          <div>
+            {dataIsOk ? (
+              <button name="answerSubmited" onClick={preventDefault}>
+                Answer Submited
+              </button>
+            ) : (
+              <button name="submitAnswersButton" onClick={sendAnswer}>
+                {" "}
+                Submit Answer
+              </button>
+            )}
+          </div>
         </form>
       </div>
-          <button onClick={sendAnswers}>Submit Answers</button>
     </div>
   );
 }
