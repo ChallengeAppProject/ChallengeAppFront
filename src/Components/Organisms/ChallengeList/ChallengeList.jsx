@@ -15,7 +15,7 @@ export function ChallengeList() {
 
   return (
     <div className="mainContainer">
-      <h1 className="welcomeTitle">Challenges</h1>
+      <h1 className="wellcomeTitle">Challenges</h1>
       <ul className="challengeIndexContainer">
         {challenges.map((challenge, index) => (
           <li className="cardChallenge" key={index}>

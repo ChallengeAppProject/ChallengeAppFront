@@ -63,7 +63,6 @@ export function QuestionCard({ question }) {
               </button>
             ) : (
               <button name="submitAnswersButton" onClick={sendAnswer}>
-                {" "}
                 Submit Answer
               </button>
             )}
