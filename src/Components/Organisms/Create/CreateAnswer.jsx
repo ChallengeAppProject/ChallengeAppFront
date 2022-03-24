@@ -83,7 +83,7 @@ function CreateAnswer() {
   };
 
   return (
-    <div>
+    <div className="answerFormContainer">
       <div className="ct-form-create">
         <button className="bt-back-new" onClick={getBack}>
           Create a new question
@@ -91,9 +91,9 @@ function CreateAnswer() {
         <h2>Challenge: {challenge.name}</h2>
         <h2>Question: {question.challengeQuestion}</h2>
       </div>
-      <div className="container py-5">
+      <div className="container-lg">
         <div className="row justify-content-center">
-          <div className="col-lg-6">
+          <div className="col-lg-100">
             <div className="card">
               <div className="card-title">
                 <h3 className="txt-title">Create an answer</h3>
