@@ -5,10 +5,20 @@
   padding-block: 10px;
   background: linear-gradient(0deg, #3c8dad, #125d98);
   opacity: 0.9;
+  
 }
 
-.ChallengeLogoNav {
+.ChallengeLogoNav figure img {
+  width: 80px;
+  
+ 
+  height: auto;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
   margin-left: 5vw;
-  display: flex;
-  background-color: transparent;
 }
+
+  .ChallengesLogoNav:hover {
+    width: 100px;
+  
+  }
