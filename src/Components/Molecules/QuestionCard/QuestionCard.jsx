@@ -39,8 +39,10 @@ export function QuestionCard({ question }) {
     <div>
       <div className="car-container">
         <div>{question.challengeQuestion}</div>
-        <div className="imageContainer"> <img src={question.imgUrl} alt="image question" />
-          </div>
+        <div className="imageContainer">
+          {" "}
+          <img src={question.imgUrl} alt="image question" />
+        </div>
         <form>
           <ul>
             {answers.map((answer, index) => (
@@ -51,7 +53,8 @@ export function QuestionCard({ question }) {
                     id={question.id}
                     onClick={handleChangeAnswer}
                     name={answer.questionId}
-                    value={answer.answerId}></input>
+                    value={answer.answerId}
+                  ></input>
                   {answer.textAnswer}
                 </div>
               </li>
@@ -59,11 +62,11 @@ export function QuestionCard({ question }) {
           </ul>
           <div>
             {dataIsOk ? (
-              <button name="answerSubmited" onClick={preventDefault}>
+              <button className="btnchll" onClick={preventDefault}>
                 Answer Submited
               </button>
             ) : (
-              <button name="submitAnswersButton" onClick={sendAnswer}>
+              <button className="bt-back-new" onClick={sendAnswer}>
                 Submit Answer
               </button>
             )}
