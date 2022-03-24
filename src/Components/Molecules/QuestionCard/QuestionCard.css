@@ -1,8 +1,15 @@
 .container{
-  margin: 20px !important;
+  display: grid;
+  align-items: center !important;
+  justify-content: center !important;
+  grid-template-columns: auto;
 }
 .listItem{
   list-style:none
+}
+
+.card{
+  margin: 20px !important;  
 }
 
 .btnchll-no {
@@ -24,6 +31,10 @@
   outline: none;
 }
 
+.questionNumber{
+  font-weight: bold;
+}
+
 .imageContainer {
   height: 275px;
   display: flex;
@@ -43,9 +54,9 @@
   overflow: hidden;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 768px) {
   .imageContainer {
-    height: 700px;
+    height:500px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -55,18 +66,30 @@
   }
 
   .imageCard {
-    max-width: 95%;
-    max-height: 95%;
-    height: 695px;
+/*     max-width: 95%;
+    max-height: 95%; */
+    height: 450px;
     align-content: center;
     border-radius: 5%;
     overflow: hidden;
   }
+  .questionNumber{
+    font-size: 125% ;
+    font-weight: bold;
+  }
+
+  .questionText{
+    font-size: 125% ;
+  }
+
+  .listItem{
+    font-size: 125% ;
+  }
 }
 
-  @media (min-width: 600px) {
+  @media (min-width: 1024px) {
     .imageContainer {
-      height: 500px;
+      height: 600px;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -78,9 +101,18 @@
     .imageCard {
       max-width: 95%;
       max-height: 95%;
-      height: 595px;
+      height: 550px;
       align-content: center;
       border-radius: 5%;
       overflow: hidden;
+    }
+
+    .questionNumber{
+      font-size: 125% ;
+      font-weight: bold;
+    }
+
+    .questionText{
+      font-size: 125% ;
     }
 }

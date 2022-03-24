@@ -1,7 +1,14 @@
-.challengeName{
-    margin-left: 5vw;
-    color: #125D98;
+.challengeName {
+  margin-left: 5vw;
+  color: #125d98;
 }
-.challengeInstructions{
-    font-weight: bold;
+.challengeInstructions {
+  font-weight: bold;
+}
+
+.containerQuestionList {
+  background-color: rgb(241, 241, 241);
+  display: grid;
+  align-items: center;
+  justify-content: center;
 }

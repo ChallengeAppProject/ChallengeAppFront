@@ -36,8 +36,8 @@ export function QuestionList() {
     <div>
       <Navbar />
 
-      <div className="container">
-      <div className="card w-75 shadow p-3 mb-5 bg-body rounded" >
+      <div className="containerQuestionList">
+      <div className="card w-95 shadow p-3 mb-5 bg-body rounded" >
           <h1 className="challengeName">Challenge: { challenge.name }</h1>
           <p className="challengeInstructions">Please answer the questions... but remember!!! Once your answer is sent, you cannot change it.
             <br/>
@@ -45,7 +45,7 @@ export function QuestionList() {
           </p>
       </div>
         {questions.map((question, index) => (
-          <li className="card w-75 shadow p-3 mb-5 bg-body rounded" key={index}>
+          <li className="card w-95 shadow p-3 mb-5 bg-body rounded" key={index}>
             <QuestionCard question={question} index={index} />
           </li>
         ))}
