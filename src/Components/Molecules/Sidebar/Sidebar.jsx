@@ -9,7 +9,7 @@ class Sidebar extends Component {
     return (
       <div className="sidebar-container">
         <img
-          className="ChallengeLogoNav"
+          className="ChallengeLogoNavSide"
           src={ChallengeLogo2}
           alt=""
           width="20%"
