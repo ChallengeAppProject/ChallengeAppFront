@@ -1,13 +1,11 @@
-import Navbar from "../../../Components/Molecules/Header/Navbar";
-import Footer from "../../../Components/Molecules/Footer/Footer";
 import CreateQuestion from "../../../Components/Organisms/Create/CreateQuestion";
+import Sidebar from "../../../Components/Molecules/Sidebar/Sidebar";
 
 function CreateQuestions() {
   return (
     <div className="App">
-      <Navbar />
+      <Sidebar />
       <CreateQuestion />
-      <Footer />
     </div>
   );
 }
