@@ -2,16 +2,20 @@ import "./Home.css";
 import ChallengeLogo2 from "../Assets/ChallengeLogo2.png";
 import BlogPostBro from  "../Assets/BlogPostBro.png";
 import homeText from "./../Assets/homeText.png"
-
+import { Link } from "react-router-dom";
 function Home() {
   return (
     <div className="App">
         <div className="homeContainer" href="/challenges">
           <div>
+            <a href="/challenges">
             <img className="logoHome" src={ChallengeLogo2} alt="" width="100%"/>
+            </a>
             </div>
-            <div>
-            <button className="buttonHome" onClick={'/challenges'}>GO</button>
+            <div >
+            <a href="/challenges">
+              <button className="buttonHome">GO</button>
+            </a>
             </div>
             <div>
               <img className="hometext" src={homeText} alt=""  />
