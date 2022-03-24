@@ -39,7 +39,8 @@ export function QuestionCard({ question }) {
     <div>
       <div className="car-container">
         <div>{question.challengeQuestion}</div>
-
+        <div className="imageContainer"> <img src={question.imgUrl} alt="image question" />
+          </div>
         <form>
           <ul>
             {answers.map((answer, index) => (
