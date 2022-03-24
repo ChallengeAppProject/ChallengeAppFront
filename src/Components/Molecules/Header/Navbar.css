@@ -1,13 +1,15 @@
 .NavContainer {
-  height: 5rem;
-  display: flex;
-  justify-content: space-between;
-  padding-block: 10px;
-  background: linear-gradient(0deg, #3c8dad, #125d98);
-  opacity: 0.9;
+ width: 100vw;
+display: flex;
+justify-content: center;
+background: linear-gradient(0deg, #3c8dad, #125d98);
+opacity: 0.9;
 }
 
 .ChallengeLogoNav {
-  width: 80px;
-  margin-left: 2vh;
+  width: 15vw;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  
+  
 }
