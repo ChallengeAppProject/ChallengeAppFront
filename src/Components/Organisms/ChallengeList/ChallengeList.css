@@ -1,8 +1,19 @@
+body{
+  background-image: url("../../../Assets/Test.png");
+  background-repeat: no-repeat;
+  background-size: 35%;
+  /* background-position: 80%; */
+  background-position-y: center;
+  background-position-x: right;
+  
+}
+
 .mainContainer {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
+  
 
   justify-content: center;
 }
@@ -20,6 +31,8 @@
 .challengeIndexContainer {
   margin-left: 6vh;
 }
+
+
 /* ul {
   margin-top: 20px !important;
   display: flex;
