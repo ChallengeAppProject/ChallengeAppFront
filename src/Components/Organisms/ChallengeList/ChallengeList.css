@@ -3,23 +3,22 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  
+
   justify-content: center;
 }
 
 .welcomeTitle {
-color: #125d98;
+  color: #125d98;
 
-text-align: center;
+  text-align: center;
 }
 
 .cardChallenge {
-  list-style:none;
-  margin-right: 232px; 
+  list-style: none;
+  /* margin-right: 232px;  */
 }
-.challengeIndexContainer{
+.challengeIndexContainer {
   margin-left: 6vh;
-  
 }
 /* ul {
   margin-top: 20px !important;

@@ -8,7 +8,6 @@
 }
 
 .ChallengeLogoNav {
-  margin-left: 5vw;
-  display: flex;
-  background-color: transparent;
+  width: 80px;
+  margin-left: 2vh;
 }

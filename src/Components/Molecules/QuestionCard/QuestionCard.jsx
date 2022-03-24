@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { ApiService } from "../../../Services/APIService";
+import "./QuestionCard.css";
 
 export function QuestionCard({ question }) {
   const [answers, setAnswers] = useState([]);
@@ -62,7 +63,7 @@ export function QuestionCard({ question }) {
           </ul>
           <div>
             {dataIsOk ? (
-              <button className="btnchll" onClick={preventDefault}>
+              <button className="btnchll-no" onClick={preventDefault}>
                 Answer Submited
               </button>
             ) : (
