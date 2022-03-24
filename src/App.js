@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-      <h1>Welcome to ChallengeApp</h1>
+      <h1>Wellcome to ChallengeApp</h1>
       <ChallengeList/>
       <Footer/>
     </div>
