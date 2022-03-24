@@ -1,7 +1,7 @@
 import Navbar from "../../../Components/Molecules/Header/Navbar";
 import Footer from "../../../Components/Molecules/Footer/Footer";
 import { Link } from "react-router-dom";
-import "./AdminLanding.css";
+import "../Admin/AdminLanding.css";
 import {ChallengeList} from "./../../../Components/Organisms/ChallengeList/ChallengeList";
 function AdminLanding() {
   return (
