@@ -6,10 +6,10 @@ import Footer from "./Components/Molecules/Footer/Footer.jsx";
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <h1 className="welcomeTitle">Wellcome to ChallengeApp</h1>
-      <ChallengeList/>
-      <Footer/>
+      <Navbar />
+      <h1 className="wellcomeTitle">Wellcome to ChallengeApp</h1>
+      <ChallengeList />
+      <Footer />
     </div>
   );
 }

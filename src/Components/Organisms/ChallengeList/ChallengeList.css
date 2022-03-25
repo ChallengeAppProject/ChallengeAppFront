@@ -1,28 +1,25 @@
-body {
-  background-image: url("../../../Assets/Test.png");
-  background-repeat: no-repeat;
-  background-size: 35%;
-  /* background-position: 80%; */
-  background-position-y: center;
-  background-position-x: right;
-}
-
 .mainContainer {
   display: flex;
   flex-direction: column;
-
-  justify-content: center;
-  align-items: center;
+  background-image: url("../../../Assets/Test.png");
+  background-position-y: center;
+  background-position-x: right;
+  background-repeat: no-repeat;
+  background-size: 35%;
+  margin-left: 5%;
+  margin-top: 10%;
+  /*  justify-content: center;
+  align-items: center; */
 }
 
 .wellcomeTitle {
   color: #125d98;
-  margin-left: 50%;
+  margin-left: 20%;
 }
 
 .cardChallenge {
   list-style: none;
 }
 .challengeIndexContainer {
-  margin-left: 50%;
+  margin-left: 20%;
 }
