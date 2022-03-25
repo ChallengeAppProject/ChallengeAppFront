@@ -37,3 +37,29 @@
   width: 80vw;
   margin-top: 5vw;
 }
+@media (min-width:800px) {
+    .logoHome {
+        margin-top: -8vw;
+       width: 50vw; 
+    }
+    .buttonHome {
+
+        width: 15vw;
+        height: 4vw; 
+        margin-top: 15vw;
+    }
+    .hometext {
+        margin-top: 2vw;
+        margin-left: -45vw;
+        width: 45vw;
+    }
+    .blogPostBro {
+        margin-right: -45vw;
+        margin-top: -28vw;
+        width: 50vw;
+    }
+
+
+
+    
+}

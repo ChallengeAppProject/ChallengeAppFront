@@ -22,7 +22,7 @@ export function QuestionCard({ question, index }) {
     ApiService()
       .getAnswersByQuestionID(question.id)
       .then((res) => setAnswers(res.data))
-      .catch( ( error ) => console.log( error.response ) );
+      .catch((error) => console.log(error.response));
     getImage();
   }, [question]);
 
@@ -47,9 +47,9 @@ export function QuestionCard({ question, index }) {
       setIsThereAnImage(true);
     }
   };
- // getImage();
+  // getImage();
   return (
-    <div className="question-container">
+    <div className="question-container ">
       <div>
         <div>
           <p className="questionNumber">Question {index + 1}:</p>
@@ -76,7 +76,8 @@ export function QuestionCard({ question, index }) {
                     id={question.id}
                     onClick={handleChangeAnswer}
                     name={answer.questionId}
-                    value={answer.answerId}></input>{" "}
+                    value={answer.answerId}
+                  ></input>{" "}
                   {answer.textAnswer}
                 </div>
               </li>
