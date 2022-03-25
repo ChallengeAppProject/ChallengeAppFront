@@ -1,5 +1,14 @@
 .scoreCard {
-    justify-content: center;
-    align-items: center;
+  color: #125d98;
+  margin: 5% 0 5% 0;
+}
 
+.card-score {
+  text-align: center;
+}
+.correct {
+  color: rgb(11, 109, 52);
+}
+.incorrect {
+  color: rgb(124, 14, 14);
 }

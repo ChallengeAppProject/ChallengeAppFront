@@ -24,6 +24,11 @@
   outline: none;
 }
 
+.questionNumber{
+  font-weight: bold;
+}
+
+
 .imageContainer {
   height: 275px;
   display: flex;
@@ -52,6 +57,14 @@
     justify-content: space-evenly;
     z-index: 1;
     margin: 10px;
+  }
+
+  .question-container{
+    font-size: 125%;
+  }
+  .questionNumber{
+    font-size: 125%;
+    font-weight: bold;
   }
 
   .imageCard {
@@ -83,4 +96,12 @@
       border-radius: 5%;
       overflow: hidden;
     }
+    .question-container{
+      font-size: 125%;
+    }
+    .questionNumber{
+      font-size: 125%;
+      font-weight: bold;
+    }
+  
 }
