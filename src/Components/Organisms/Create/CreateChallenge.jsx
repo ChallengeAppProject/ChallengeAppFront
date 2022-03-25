@@ -56,7 +56,7 @@ function CreateChallenge() {
       <button className="bt-back" onClick={getBack}>
         Back
       </button>
-      <div className="container py-5">
+      <div className="container-lg">
         <div className="row justify-content-center">
           <div className="col-lg-6">
             <div className="card">

@@ -91,7 +91,7 @@ function CreateAnswer() {
         <h2>Challenge: {challenge.name}</h2>
         <h2>Question: {question.challengeQuestion}</h2>
       </div>
-      <div className="container py-5">
+      <div className="container-lg">
         <div className="row justify-content-center">
           <div className="col-lg-6">
             <div className="card">
