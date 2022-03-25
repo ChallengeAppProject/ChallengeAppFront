@@ -13,23 +13,4 @@ describe('<ChallengeList />', () => {
     expect(wrapper.contains(<h1 className="wellcomeTitle">Challenges</h1>)).to.equal(true);
   } );
   
-  it('renders a challengeCard', () => {
-    const wrapper = shallow( <ChallengeList /> );
-    //expect(wrapper.find('.card-container')).to.have.lengthOf(0);
-    expect( wrapper.render().contents() ).to.have.lengthOf( 2 );
-  } );
-  
-
-
-
-
-
-/*   it('simulates click events', () => {
-    const preventDefault = sinon.spy();
-    const event = sinon.mock
-    const question = sinon.spy();
-    const wrapper = shallow(<QuestionCard question={question} onButtonClick={preventDefault} />);
-    wrapper.find('button').simulate('click');
-    expect(button).to.have.property(preventDefault);
-  });*/
 });  
