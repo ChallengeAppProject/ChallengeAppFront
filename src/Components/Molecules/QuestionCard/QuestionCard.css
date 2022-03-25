@@ -1,3 +1,10 @@
+.container{
+  margin: 20px !important;
+}
+.listItem{
+  list-style:none
+}
+
 .btnchll-no {
   background-color: transparent;
   border: 0;
@@ -15,4 +22,65 @@
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease 0s;
   outline: none;
+}
+
+.imageContainer {
+  height: 275px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 1;
+  margin: 10px;
+}
+
+.imageCard {
+  max-width: 95%;
+  max-height: 95%;
+  height: 260px;
+  align-content: center;
+  border-radius: 5%;
+  overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  .imageContainer {
+    height: 700px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 1;
+    margin: 10px;
+  }
+
+  .imageCard {
+    max-width: 95%;
+    max-height: 95%;
+    height: 695px;
+    align-content: center;
+    border-radius: 5%;
+    overflow: hidden;
+  }
+}
+
+  @media (min-width: 600px) {
+    .imageContainer {
+      height: 500px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      z-index: 1;
+      margin: 10px;
+    }
+  
+    .imageCard {
+      max-width: 95%;
+      max-height: 95%;
+      height: 595px;
+      align-content: center;
+      border-radius: 5%;
+      overflow: hidden;
+    }
 }
