@@ -8,7 +8,7 @@ class Navbar extends Component {
     return (
       <div className="NavContainer">
        <a href="/challenges">
-       <img  className="ChallengeLogoNav" src={ChallengeLogo2} alt="" width="20%"/>
+       <img  className="ChallengeLogoNav" src={ChallengeLogo2} alt=""/>
        </a>
       </div>
     );
