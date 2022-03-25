@@ -13,3 +13,13 @@ opacity: 0.9;
   
   
 }
+@media (min-width:800px) {
+  .ChallengeLogoNav {
+    width: 7vw;
+    margin-top: 1vw;
+  }
+  .NavContainer {
+  height: 7vw;
+
+}
+}
