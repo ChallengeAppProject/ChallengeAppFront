@@ -1,6 +1,16 @@
+body {
+  background-image: url("../../../Assets/Test.png");
+  background-repeat: no-repeat;
+  background-size: 35%;
+  /* background-position: 80%; */
+  background-position-y: center;
+  background-position-x: right;
+}
+
 .mainContainer {
   display: flex;
   flex-direction: column;
+
   justify-content: center;
   align-items: center;
 }

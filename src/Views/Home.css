@@ -1,43 +1,39 @@
 .homeContainer {
-   display: flex;
-   flex-direction: column;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;  
-  
+  align-items: center;
 }
 
 .logoHome {
-    box-sizing: content-box;
-    width: 100vw;   
-    margin-bottom: -30vw;
-    margin-top: -10vw;
-
+  box-sizing: content-box;
+  width: 100vw;
+  margin-bottom: -30vw;
+  margin-top: -10vw;
 }
 
 .buttonHome {
-    width: 40vw;
-    height: 12vw;
-    margin-bottom: 5vw;
-    font-size: 1.5em;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #000;
-    background-color: #f5a962ad;
-    border: none;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-    outline: none;
+  width: 40vw;
+  height: 12vw;
+  margin-bottom: 5vw;
+  font-size: 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #000;
+  background-color: #f5a962ad;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  outline: none;
 }
 .hometext {
-    width: 90vw;
-    margin-bottom: -15vw;
+  width: 90vw;
+  margin-bottom: -15vw;
 }
 
-
-.blogPostBro{
-    width: 80vw;
-    margin-top: 5vw;
-
+.blogPostBro {
+  width: 80vw;
+  margin-top: 5vw;
 }
