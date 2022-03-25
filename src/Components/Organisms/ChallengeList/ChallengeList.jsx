@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { ApiService } from "../../../Services/APIService";
 import { ChallengeCard } from "../../Molecules/ChallengeCard/ChallengeCard";
 import "./ChallengeList.css";
-import  testImage  from "../../../Assets/testImage.png";
+import testImage from "../../../Assets/testImage.png";
 
 export function ChallengeList() {
   const [challenges, setChallenge] = useState([]);
@@ -16,18 +16,23 @@ export function ChallengeList() {
 
   return (
     <div className="mainContainer">
-      <h1 className="wellcomeTitle">Challenges</h1>
+      <div className="imgContainer">
+        <img
+          className="testImage"
+          src={testImage}
+          alt="testImage"
+          width="30%"
+        />
+      </div>
+      <div className="challengesTitle">These are our Challenges:</div>
       <div>
-      {/* <img className="testImage" src={testImage} alt="testImage" width="30%" /> */}
-      
-      <ul className="challengeIndexContainer">
-        {challenges.map((challenge, index) => (
-          <li className="cardChallenge" key={index}>
-            <ChallengeCard challenge={challenge} /> 
-          </li>
-          
-        ))}
-      </ul>
+        <ul className="challengeIndexContainer">
+          {challenges.map((challenge, index) => (
+            <div className="cardChallenge" key={index}>
+              <ChallengeCard challenge={challenge} />
+            </div>
+          ))}
+        </ul>
       </div>
     </div>
   );

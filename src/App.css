@@ -1,1 +1,14 @@
+.App {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    
+  
+  }
+
+.wellcomeTitle {
+    margin-top: 5vh;
+    align-self: center;
+}
+
 
