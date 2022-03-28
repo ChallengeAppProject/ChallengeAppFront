@@ -37,7 +37,7 @@ export function QuestionList() {
       <Navbar />
 
       <div className="challengesContent">
-        <div className="card card w-75 p-3 mb-5 border shadow-none">
+        <div className="card w-75 p-3 mb-5 shadow-none">
           <h1 className="challengeName ">Challenge: {challenge.name}</h1>
           <p className="challengeInstructions">
             Please answer the questions... but remember!!! Once your answer is
@@ -49,10 +49,11 @@ export function QuestionList() {
             <QuestionCard question={question} index={index} />
           </li>
         ))}
-
-        <button className="btnScore" onClick={routeChange}>
-          Get total Score
-        </button>
+        <div className="totalScore">
+          <button className="btnScore" onClick={routeChange}>
+            Get total Score
+          </button>
+        </div>
       </div>
       <Footer />
     </div>

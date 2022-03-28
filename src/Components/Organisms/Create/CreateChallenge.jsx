@@ -41,9 +41,10 @@ function CreateChallenge() {
       })
       .catch((error) => {
         alert(`Sorry, ${error}`);
-        setError( error);
-            console.log(error)
-      });setForm(initialForm)
+        setError(error);
+        console.log(error);
+      });
+    setForm(initialForm);
   };
 
   const getBack = () => {
@@ -52,10 +53,11 @@ function CreateChallenge() {
 
   return (
     <div className="createChallengeContainer">
-      <div className="ct-form-create"></div>
-      <button className="bt-back" onClick={getBack}>
-        Back
-      </button>
+      <div className="ct-form-create">
+        <button className="bt-back" onClick={getBack}>
+          Back
+        </button>
+      </div>
       <div className="container-lg">
         <div className="row justify-content-center">
           <div className="col-lg-6">
@@ -77,7 +79,7 @@ function CreateChallenge() {
                       required
                     />
                   </div>
-                  <span className="error-register">{ error}</span>
+                  <span className="error-register">{error}</span>
 
                   <div className="form-group my-3">
                     <button type="submit" className="btnchll">
@@ -86,7 +88,8 @@ function CreateChallenge() {
                     <button
                       type="reset"
                       className="btnchll"
-                      onClick={handleReset}>
+                      onClick={handleReset}
+                    >
                       Clear
                     </button>
                   </div>

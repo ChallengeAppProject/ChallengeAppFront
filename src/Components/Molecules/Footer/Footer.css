@@ -1,9 +1,10 @@
 .footer {
   width: 100vw;
+  height: 11vh;
   display: flex;
   justify-content: center;
-
-  position: fixed;
+  align-items: center;
+  /* position: fixed; */
   bottom: 0;
   background: linear-gradient(180deg, #3c8dad, #125d98);
   opacity: 0.9;
@@ -11,4 +12,5 @@
 
 p.footerText {
   color: #ffffff;
+  margin-top: 1rem;
 }

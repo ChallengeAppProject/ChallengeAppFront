@@ -83,7 +83,7 @@ export function QuestionCard({ question, index }) {
               </li>
             ))}
           </ul>
-          <div>
+          <div className="buttons">
             {dataIsOk ? (
               <button className="btnchll-no" onClick={preventDefault}>
                 Answer Submited
