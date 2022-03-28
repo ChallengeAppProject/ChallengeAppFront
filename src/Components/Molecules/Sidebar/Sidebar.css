@@ -8,11 +8,15 @@
   text-decoration: none;
 }
 
+.logo-container {
+  display: flex;
+  justify-content: center;
+}
+
 .ChallengeLogoNavSide {
-  width: 100px;
-  margin-left: 28%;
-  margin-top: 8%;
-  margin-bottom: 8%;
+  width: 130px;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 .content-container {
   padding-top: 20px;
@@ -62,4 +66,11 @@
 
 .sidebar-navigation li:hover::before {
   width: 100%;
+}
+
+@media (max-width: 820px) {
+  .sidebar-container {
+    width: 100%;
+    position: relative;
+  }
 }

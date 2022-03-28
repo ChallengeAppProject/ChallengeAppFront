@@ -8,12 +8,14 @@ class Sidebar extends Component {
   render() {
     return (
       <div className="sidebar-container">
-        <img
-          className="ChallengeLogoNavSide"
-          src={ChallengeLogo2}
-          alt=""
-          width="20%"
-        />
+        <div className="logo-container">
+          <img
+            className="ChallengeLogoNavSide"
+            src={ChallengeLogo2}
+            alt=""
+            width="20%"
+          />
+        </div>
 
         <ul className="sidebar-navigation">
           <div className="sidebar-logo">Administrator</div>
