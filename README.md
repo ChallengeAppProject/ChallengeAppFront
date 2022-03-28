@@ -19,13 +19,14 @@ $ git clone https://github.com/ChallengeAppProject
 
 ## Demo 📽️
 
-An administrator can create a Challenge
+Administrator can create a Challenge
  
- <img src="" />
+ <img src="https://github.com/ChallengeAppProject/ChallengeAppFront/blob/dev/src/Assets/gifs/ChallengeCreate.gif" />
 
-An administrator can add questions and answers to a Challenge 
- <img src="" />
- <img src="" />
+Administrator can add questions and answers to a Challenge 
+ <img src="https://github.com/ChallengeAppProject/ChallengeAppFront/blob/dev/src/Assets/gifs/QuestionAndAnswer.gif" />
+User can answer a Challenge and check the final score:
+ <img src="https://github.com/ChallengeAppProject/ChallengeAppFront/blob/dev/src/Assets/gifs/ResponseChallenge.gif" />
 
 
 
