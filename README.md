@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# ChallengeApp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Challenge App is a project that was devised to cover a specific training need, either within a company or in the educational field.
+It is an application that generates test-type exams ("Challenges") in which it is the client himself who can create the Challenges and assign the participants to them.
 
-## Available Scripts
+The goal of this project has been to learn how to connect Back-end and Front-end, developing a MVC architecture with layers, in wich a DTO layer isolate the Controller layer of the Domain layer
 
-In the project directory, you can run:
+## GitHub Repositories 🚀
 
-### `npm start`
+If you are interested in the code, whould visit our repositories:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+https://github.com/ChallengeAppProject
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+These instructions will allow you to get a working copy of the project on your local computer for development and testing purposes:
+**Open terminal** and run the following command to download the project:
 
-### `npm test`
+$ git clone https://github.com/ChallengeAppProject
+ 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Demo 📽️
 
-### `npm run build`
+An administrator can create a Challenge
+ 
+ <img src="" />
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+An administrator can add questions and answers to a Challenge 
+ <img src="" />
+ <img src="" />
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Pending Tasks 🛠️
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Add files to upload pictures
+* Add users to a challenge (Admin)
+* Add approval criteria to challenges (Admin)
+* Update and delete Challenges, questions and answers (Admin)
+* Being able to check results history (Admin & Users)  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Languages 🤓
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* [HTML](https://www.w3schools.com/html/)
+* [CSS](https://www.w3schools.com/css/)
+* [JavaScript](https://www.w3schools.com/js/)
+* [JAVA](https://www.w3schools.com/java/)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Author ✒️
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* [Carmen Rubio](https://github.com/Carruor)
+* [Esther Castell](https://github.com/EstherCastell)
+* [Melisa Menoni](https://github.com/MeliMano)
+* [Miquel Cruz](https://github.com/mcc72)
+* [Rubén Caminal](https://github.com/Rubencapo)
+* [SergiFuentes](https://github.com/SergiFuentes)
+ 
+## Acknowledgements 🎁
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* A deep thanks to [Factoria F5](https://factoriaf5.org/ca/) for the initiation in this strange and magical world of programming.
 
-### Code Splitting
+* Huge thanks also to [Sergi Virgili](https://github.com/Sergi-Virgili) and [Alexandra Galarza](https://github.com/MAlexGG) for his  fantastic teachings. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* Thanks also to [Ika ikaTayang](https://github.com/ikatyang), has a fantastic repository of icons for the readme([Visit here](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#smileys--emotion)).
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+⌨️ with ❤️ by [The ChallengeApp Team](https://github.com/ChallengeAppProject) 🤘😊🤘
