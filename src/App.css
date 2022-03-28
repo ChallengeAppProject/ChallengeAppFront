@@ -1,14 +1,12 @@
 .App {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    
-  
-  }
-
-.wellcomeTitle {
-    margin-top: 5vh;
-    align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-
+.wellcomeTitle {
+  margin-top: 5vh;
+  align-self: center;
+  color: #125d98;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}

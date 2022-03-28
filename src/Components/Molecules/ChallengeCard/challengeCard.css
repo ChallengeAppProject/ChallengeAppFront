@@ -7,9 +7,8 @@
 
 .card-container {
   margin-top: 3vh;
-  height: 5vw;
-  width: 45vh;
-  border-style: solid;
+  height: 6vw;
+  width: 55vh;
   border-width: 1px;
   border-color: rgb(222, 222, 222);
   border-radius: 25px;
@@ -23,5 +22,5 @@
 }
 
 .card-container:hover {
-  background-color: #f5a9629d;
+  background-color: #cccbcaa1;
 }
