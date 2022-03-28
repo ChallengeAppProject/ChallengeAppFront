@@ -14,7 +14,7 @@ function Home() {
             </div>
             <div >
             <a href="/challenges">
-              <button className="buttonHome">GO</button>
+              <button className="buttonHome">START</button>
             </a>
             </div>
             <div>
