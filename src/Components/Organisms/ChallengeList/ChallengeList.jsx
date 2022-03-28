@@ -24,7 +24,7 @@ export function ChallengeList() {
           width="30%"
         />
       </div>
-      <div className="challengesTitle">These are our Challenges:</div>
+      <h2 className="challengesTitle">These are our available Challenges:</h2>
       <div>
         <ul className="challengeIndexContainer">
           {challenges.map((challenge, index) => (
