@@ -36,8 +36,8 @@ export function QuestionList() {
     <div>
       <Navbar />
 
-      <div className="container">
-        <div className="card card w-75 p-3 mb-5 ">
+      <div className="challengesContent">
+        <div className="card card w-75 p-3 mb-5 border shadow-none">
           <h1 className="challengeName ">Challenge: {challenge.name}</h1>
           <p className="challengeInstructions">
             Please answer the questions... but remember!!! Once your answer is
@@ -45,7 +45,7 @@ export function QuestionList() {
           </p>
         </div>
         {questions.map((question, index) => (
-          <li className="card w-75 p-3 mb-5 rounded-3" key={index}>
+          <li className="card w-75 p-3 mb-5 rounded-3 shadow-none" key={index}>
             <QuestionCard question={question} index={index} />
           </li>
         ))}

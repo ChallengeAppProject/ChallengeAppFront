@@ -12,7 +12,9 @@ describe("<ChallengeList />", () => {
     const wrapper = shallow(<ChallengeList />);
     expect(
       wrapper.contains(
-        <h2 className="challengesTitle">These are our available Challenges:</h2>
+        <h2 className="challengesTitle">
+          These are your available Challenges:
+        </h2>
       )
     ).to.equal(true);
   });

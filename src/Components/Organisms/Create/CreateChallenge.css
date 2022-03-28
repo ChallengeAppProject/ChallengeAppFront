@@ -21,17 +21,22 @@
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: #000;
-  background-color: #f5a962ad;
+  /* color: #4f60ad; */
+  background-color: #ffa929a6;
   border: none;
-  border-radius: 45px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  /* box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); */
   transition: all 0.3s ease 0s;
   outline: none;
 }
 
 .btnchll:hover {
-  background-color: #125d98;
-  color: #fff;
-  transform: translateY(-2px);
+  background-color: #ffcb22bb;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 563px) {
+  .btnchll {
+    margin-left: 10%;
+  }
 }

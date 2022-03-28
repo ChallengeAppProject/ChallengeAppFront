@@ -7,36 +7,39 @@
 }
 .listItem {
   list-style: none;
-  margin-left: 12%;
+  margin-left: 6%;
+  /* margin-top: 1%; */
 }
 
 .btnchll-no {
   background-color: transparent;
   border: 0;
   margin-bottom: 20px;
-  width: 130px;
+  width: 135px;
   height: 40px;
   margin-right: 5px;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   color: #000;
-  background-color: #f5a962ad;
+  background-color: #0d690d91;
   border: none;
-  border-radius: 45px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  /* box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); */
   transition: all 0.3s ease 0s;
   outline: none;
-  margin-left: 15%;
+  margin-left: 10%;
 }
 
 .questionNumber {
   font-weight: bold;
-  margin-left: 15%;
+  margin-left: 10%;
+  color: #4f60ad;
 }
 
 .questionChallenge {
-  margin-left: 15%;
+  margin-left: 10%;
+  margin-bottom: 2%;
 }
 
 .imageContainer {

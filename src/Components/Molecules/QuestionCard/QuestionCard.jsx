@@ -49,7 +49,7 @@ export function QuestionCard({ question, index }) {
   };
   // getImage();
   return (
-    <div className="question-container ">
+    <div className="question-container">
       <div>
         <div>
           <p className="questionNumber">Question {index + 1}:</p>
