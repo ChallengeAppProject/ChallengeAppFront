@@ -4,6 +4,7 @@
 }
 .challengeInstructions {
   font-weight: bold;
+  margin-left: 10%;
 }
 
 .containerQuestionList {
@@ -11,8 +12,13 @@
   display: grid;
   align-items: center;
   justify-content: center;
+  margin-left: 10%;
 }
 
 .btnchll {
   margin-bottom: 5rem;
+}
+
+.challengeInstructions {
+  margin-left: 8%;
 }

@@ -54,7 +54,7 @@ export function QuestionCard({ question, index }) {
         <div>
           <p className="questionNumber">Question {index + 1}:</p>
         </div>
-        <div> {question.challengeQuestion}</div>
+        <div className="questionChallenge"> {question.challengeQuestion}</div>
         {isThereAnImage ? (
           <div className="imageContainer">
             <img

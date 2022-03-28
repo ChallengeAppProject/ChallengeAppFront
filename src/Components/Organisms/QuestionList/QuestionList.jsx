@@ -1,4 +1,4 @@
-import './QuestionList.css'
+import "./QuestionList.css";
 import { useState, useEffect } from "react";
 import { ApiService } from "../../../Services/APIService";
 import { QuestionCard } from "../../Molecules/QuestionCard/QuestionCard";
@@ -37,15 +37,15 @@ export function QuestionList() {
       <Navbar />
 
       <div className="container">
-      <div className="card w-75 shadow p-3 mb-5 bg-body rounded" >
-          <h1 className="challengeName">Challenge: { challenge.name }</h1>
-          <p className="challengeInstructions">Please answer the questions... but remember!!! Once your answer is sent, you cannot change it.
-            <br/>
-            Good luck!!!
+        <div className="card card w-75 p-3 mb-5 ">
+          <h1 className="challengeName ">Challenge: {challenge.name}</h1>
+          <p className="challengeInstructions">
+            Please answer the questions... but remember!!! Once your answer is
+            sent, you cannot change it. Good luck!!!
           </p>
-      </div>
+        </div>
         {questions.map((question, index) => (
-          <li className="card w-75 shadow p-3 mb-5 bg-body rounded" key={index}>
+          <li className="card w-75 p-3 mb-5 rounded-3" key={index}>
             <QuestionCard question={question} index={index} />
           </li>
         ))}
