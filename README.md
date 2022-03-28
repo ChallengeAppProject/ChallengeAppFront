@@ -19,13 +19,13 @@ $ git clone https://github.com/ChallengeAppProject
 
 ## Demo 📽️
 
-Administrator can create a Challenge
+#Administrator can create a Challenge:
  
  <img src="https://github.com/ChallengeAppProject/ChallengeAppFront/blob/dev/src/Assets/gifs/ChallengeCreate.gif" />
 
-Administrator can add questions and answers to a Challenge 
+#Administrator can add questions and answers to a Challenge: 
  <img src="https://github.com/ChallengeAppProject/ChallengeAppFront/blob/dev/src/Assets/gifs/QuestionAndAnswer.gif" />
-User can answer a Challenge and check the final score:
+#User can answer a Challenge and check the final score:
  <img src="https://github.com/ChallengeAppProject/ChallengeAppFront/blob/dev/src/Assets/gifs/ResponseChallenge.gif" />
 
 
@@ -46,7 +46,7 @@ User can answer a Challenge and check the final score:
 * [JAVA](https://www.w3schools.com/java/)
 
 
-## Author ✒️
+## Authors ✒️
 
 * [Carmen Rubio](https://github.com/Carruor)
 * [Esther Castell](https://github.com/EstherCastell)
