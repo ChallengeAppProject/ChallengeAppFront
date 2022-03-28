@@ -8,5 +8,9 @@
   margin-top: 5vh;
   align-self: center;
   color: #125d98;
+  text-align: center;
+  overflow-wrap: break-word;
+  margin-left: 5px;
+  margin-right: 5px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }

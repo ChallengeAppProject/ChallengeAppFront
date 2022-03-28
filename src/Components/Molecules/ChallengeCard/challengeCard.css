@@ -7,8 +7,8 @@
 
 .card-container {
   margin-top: 3vh;
-  height: 6vw;
-  width: 55vh;
+  height: 5rem;
+  width: 23rem;
   border-width: 1px;
   border-color: rgb(222, 222, 222);
   border-radius: 25px;
@@ -23,4 +23,21 @@
 
 .card-container:hover {
   background-color: #cccbcaa1;
+}
+
+@media (max-width: 405px) {
+  .card-container {
+    height: 5rem;
+    width: 18rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (max-width: 320px) {
+  .card-container {
+    height: 5rem;
+    width: 15rem;
+    text-align: center;
+  }
 }
