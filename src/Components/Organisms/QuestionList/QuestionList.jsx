@@ -50,7 +50,7 @@ export function QuestionList() {
           </li>
         ))}
 
-        <button className="btnchll" onClick={routeChange}>
+        <button className="btnScore" onClick={routeChange}>
           Get total Score
         </button>
       </div>
