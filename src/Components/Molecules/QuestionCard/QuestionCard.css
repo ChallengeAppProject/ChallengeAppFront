@@ -24,7 +24,6 @@
   background-color: #0d690d91;
   border: none;
   border-radius: 15px;
-  /* box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); */
   transition: all 0.3s ease 0s;
   outline: none;
   margin-left: 10%;
@@ -49,6 +48,9 @@
   justify-content: space-evenly;
   z-index: 1;
   margin: 10px;
+}
+.car-container {
+  margin-left: 2%;
 }
 
 .imageCard {
@@ -129,6 +131,6 @@
     margin-left: 0 !important;
   }
   .car-container {
-    margin-left: 0 !important;
+    margin-left: 5% !important;
   }
 }
