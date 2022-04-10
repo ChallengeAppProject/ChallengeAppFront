@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import api from "../../Services";
 import { Link, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
-import "../../assets/styles/register.css";
+import "./RegisterForm.css";
 import { useUser } from "./AuthProvider";
 
 const RegisterForm = () => {
@@ -32,7 +32,7 @@ const RegisterForm = () => {
 
       localStorage.setItem("auth_token", data.accessToken);
 
-      navigate("/garden", { replace: true });
+      navigate("/home", { replace: true });
       swal({
         title: "Register complete",
         text: "click 'ok' to start in ChallengeApp",

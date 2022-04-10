@@ -1,0 +1,157 @@
+.form_main_register {
+    display: flex;
+    align-content: space-around;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* background-image: url(https://cdn.dribbble.com/users/6024852/screenshots/16264037/media/3d6f4872328fac5bcfaf29ec260524f3.png?compress=1&resize=1200x900&vertical=top); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-width: 100%;
+    opacity: 0.9;
+    height: 85vh;
+  }
+  
+  .form_container_register {
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(5, 5, 5, 0.733);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 29em;
+    height: 85%;
+    min-width: 10em;
+    border-radius: 1rem;
+  }
+  
+  .title_register {
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 2px rgb(234, 252, 234);
+    text-shadow: 2px 2px 20px rgb(0, 0, 0);
+    color: green;
+    padding: 0.4em 0 0.4em;
+    padding: 0.4em 0 0.4em;
+    margin-bottom: 0.5em;
+  }
+  
+  .rf-titleform {
+    font-size: 1.5em;
+    padding: 0.4em;
+    display: flex;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+  }
+  
+  .form_label_register {
+    padding: 1em;
+    font-size: medium;
+    width: 100%;
+    color: green;
+    font-weight: bolder;
+    text-shadow: 1px 1px rgb(2, 2, 2), -1px -1px #333;
+    border-radius: 0.4rem;
+    padding-left: 4em;
+  }
+  
+  .inputRegisterForm {
+    padding: 1.5%;
+    height: 4em;
+    width: 25em;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    resize: vertical;
+    background-color: green;
+    color: black;
+  }
+  
+  .inputRegisterForm select,
+  textarea {
+    width: 100%;
+    cursor: pointer;
+    float: right;
+    margin: 3%;
+  }
+  
+  .btn_form_register {
+    background:green;
+    width: 6rem;
+    height: 2.5rem;
+    color: white;
+    padding: 2%;
+    border: none;
+    border-radius: 1rem;
+    float: right;
+    margin-top: 1.8em;
+  }
+  
+  .btn_form_register:hover {
+    cursor: pointer;
+    background-color: rgb(61, 49, 24);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+  
+  .rf-link {
+    margin-top: 3%;
+  }
+  
+  .rf-link-a {
+    color: white;
+    font-size: 0.9em;
+    text-align: right;
+    justify-content: right;
+    padding: 1% 0% 1%;
+  }
+  
+  .rf-link-a:hover {
+    color: rgb(28, 61, 47);
+  }
+  
+  @media (max-width: 1800px) {
+    .form_container_register {
+      background: linear-gradient(
+        180deg,
+        rgb(0, 0, 0) 2%,
+        rgba(42, 56, 83, 0.604) 77%,
+        rgba(240, 200, 73, 1) 100%
+      );
+      width: 30em;
+      border: none;
+    }
+  }
+  @media screen and (max-width: 870px) {
+    .form_container_register {
+      width: 25em;
+      height: 70vw;
+    }
+    .form_label_register {
+      padding: 0.5em;
+      margin-left: 3em;
+    }
+    .rf-titleform {
+      font-size: 1.2em;
+    }
+  }
+  
+  @media screen and (max-width: 760px) {
+    .form_container_register {
+      width: 21em;
+      height: 81vw;
+    }
+    .inputRegisterForm {
+      padding: 1.5%;
+      width: 19em;
+    }
+  }
+  
+  @media screen and (max-width: 550px) {
+    .form_container_register {
+      width: 22em;
+      height: 80vh;
+    }
+  }

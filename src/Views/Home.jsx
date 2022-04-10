@@ -3,9 +3,11 @@ import ChallengeLogo2 from "../Assets/ChallengeLogo2.png";
 import BlogPostBro from  "../Assets/BlogPostBro.png";
 import homeText from "./../Assets/homeText.png"
 import { Link } from "react-router-dom";
+import Header from "../Components/Molecules/Header/Header";
 function Home() {
   return (
     <div className="App">
+      
         <div className="homeContainer" href="/challenges">
           <div>
             <a href="/challenges">

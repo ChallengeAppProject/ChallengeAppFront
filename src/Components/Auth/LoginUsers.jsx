@@ -1,5 +1,5 @@
 import React from "react";
-import "../../assets/styles/login.css";
+import "./LoginUsers.css";
 import { useUser } from "./AuthProvider";
 import api from "../../Services";
 import { useNavigate } from "react-router-dom";
@@ -24,7 +24,7 @@ const LoginUsers = () => {
 
       localStorage.setItem("auth_token", data.accessToken);
 
-      navigate("/garden", { replace: true });
+      navigate("/challenges", { replace: true });
     } catch (error) {
       console.log(error.message);
     }

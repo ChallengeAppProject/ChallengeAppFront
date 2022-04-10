@@ -10,13 +10,14 @@ import AdminLanding from "../Views/Pages/Admin/AdminLanding";
 import UserTotalScore from "./Organisms/UserTotalScore/UserTotalScore";
 import Results from "../Views/Results";
 import Home from "../Views/Home";
+import { ChallengeList } from "./Organisms/ChallengeList/ChallengeList";
 
 function Router() {
-  return (
+/*   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/challenges" element={<App />} />
+        <Route path="/challenges" element={<ChallengeList />} />
         <Route path="/create/challenge" element={<CreateChallenges />} />
         <Route path="/challenges/:id/question" element={<CreateQuestions />} />
         <Route path="/questions/:id/answer" element={<CreateAnswers />} />
@@ -29,6 +30,6 @@ function Router() {
         />
       </Routes>
     </BrowserRouter>
-  );
+  ); */
 }
 export default Router;
