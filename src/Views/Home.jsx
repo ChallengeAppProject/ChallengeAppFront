@@ -1,3 +1,4 @@
+import React from "react";
 import "./Home.css";
 import ChallengeLogo2 from "../Assets/ChallengeLogo2.png";
 import BlogPostBro from  "../Assets/BlogPostBro.png";
@@ -15,10 +16,15 @@ function Home() {
             </a>
             </div>
             <div >
-            <a href="/challenges">
+            <a href="/login">
               <button className="buttonHome">START</button>
             </a>
-            </div>
+        </div>
+        <div className="cta">
+                  <Link className="btn-cta-m" to="/register">
+                    Register
+                  </Link>
+                </div>
             <div>
               <img className="hometext" src={homeText} alt=""  />
             </div>

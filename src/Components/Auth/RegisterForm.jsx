@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import api from "../../Services";
+import { signup } from "../../Services/APIService";
+import {login} from "../../Services/APIService";
 import { Link, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 import "./RegisterForm.css";
@@ -16,13 +17,13 @@ const RegisterForm = () => {
     e.preventDefault();
 
     try {
-      await api.signup({
+      await signup({
         username,
         email,
         password,
       });
 
-      const { data } = await api.login({ username, password });
+      const { data } = await login({ username, password });
 
       setUser({
         id: data.id,
@@ -32,7 +33,7 @@ const RegisterForm = () => {
 
       localStorage.setItem("auth_token", data.accessToken);
 
-      navigate("/home", { replace: true });
+      navigate("/layout", { replace: true });
       swal({
         title: "Register complete",
         text: "click 'ok' to start in ChallengeApp",
@@ -53,7 +54,7 @@ const RegisterForm = () => {
         <div className="form_register_info">
           <form className="form_register_information" onSubmit={submit}>
             <label className="form_label_register" htmlFor="username">
-              🍀 Name
+              Name
             </label>
             <input
               className="inputRegisterForm"
@@ -65,7 +66,7 @@ const RegisterForm = () => {
               required
             />
             <label className="form_label_register" htmlFor="email">
-              🍀 Email
+              Email
             </label>
             <input
               className="inputRegisterForm"
@@ -76,7 +77,7 @@ const RegisterForm = () => {
               required
             />
             <label className="form_label_register" htmlFor="password">
-              🍀 Password
+              Password
             </label>
             <input
               className="inputRegisterForm"

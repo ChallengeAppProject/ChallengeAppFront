@@ -1,7 +1,7 @@
 import React from "react";
 import { useUser } from "./AuthProvider";
 
-import api from "../../Services";
+import {getCurrentUser} from "../../Services/APIService";
 
 const useAutoLogin = () => {
   const { setUser } = useUser();
@@ -10,7 +10,7 @@ const useAutoLogin = () => {
     () => {
       (async () => {
         try {
-          const { data } = await api.getCurrentUser();
+          const { data } = await getCurrentUser();
 
           if (data) {
             setUser({

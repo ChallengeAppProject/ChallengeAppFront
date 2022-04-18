@@ -1,8 +1,9 @@
 import React from "react";
 import "./LoginUsers.css";
 import { useUser } from "./AuthProvider";
-import api from "../../Services";
+import {login} from "../../Services/APIService";
 import { useNavigate } from "react-router-dom";
+import logo from "../../Assets/LogoChallengeApp.png"
 
 const LoginUsers = () => {
   const [password, setPassword] = React.useState("");
@@ -14,7 +15,7 @@ const LoginUsers = () => {
     try {
       e.preventDefault();
 
-      const { data } = await api.login({ username, password });
+      const { data } = await login({ username, password });
 
       setUser({
         id: data.id,
@@ -33,7 +34,7 @@ const LoginUsers = () => {
   return (
     <div className="login_container">
       <div className="login_card">
-        <h1>Login to GardenMaps</h1>
+        <h1>Login to ChallengeApp</h1>
         <form className="form_login" onSubmit={submit}>
           <div className="form_login-name">
             <label className="label_login" htmlFor="">
@@ -57,14 +58,14 @@ const LoginUsers = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button to="/garden" className="btn_form_login" type="submit">
+          <button to="/challenges" className="btn_form_login" type="submit">
             Login
           </button>
         </form>
         <img
-          className="login_gif"
-          src="https://media4.giphy.com/media/iy7h2RteA2Et5fBSYN/200w.webp?cid=ecf05e47chujau85xi8so3qte1nbc4yi9p59ahqpmc86bdrf&rid=200w.webp&ct=s"
-          alt=""
+          className="login_img"
+          src={logo}
+          alt="logo"
         />
       </div>
     </div>

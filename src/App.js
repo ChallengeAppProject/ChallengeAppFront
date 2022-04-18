@@ -17,6 +17,7 @@ import Results from "./Views/Results";
 import RegisterForm from "./Components/Auth/RegisterForm";
 import Login from "./Views/Pages/User/Login";
 import Challenges from "./Views/Pages/User/challenges";
+import Layout from "./Components/Layout";
 
 const AutoLogin = () => {
   useAutoLogin();
@@ -29,7 +30,7 @@ function App() {
       <AuthProvider>
         <AutoLogin />
         <Routes>
-      <Route path="/" element={<Home />} />
+        <Route path="/" element={<Layout />}/>
           <Route path="/challenges" element={<Challenges />} />
           <Route path="/create/challenge" element={<CreateChallenges />} />
           <Route

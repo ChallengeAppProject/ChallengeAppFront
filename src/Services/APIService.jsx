@@ -19,6 +19,10 @@ export const login = async (data) => {
   return res;
 };
 
+export const getUsers = () => axios.get("/users");
+
+export const getCurrentUser = () => axios.get("/users/me");
+
 export const ApiService = () => {
   let baseUrl = "http://localhost:8080";
   let urlChallenges = "/challenges";
@@ -92,7 +96,7 @@ export const ApiService = () => {
     createQuestion,
     createAnswer,
     getUserTotalScore,
-    postAnswersByQuestionId
+    postAnswersByQuestionId,
   };
 };
 
