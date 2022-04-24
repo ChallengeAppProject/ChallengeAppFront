@@ -33,14 +33,18 @@ const RegisterForm = () => {
 
       localStorage.setItem("auth_token", data.accessToken);
 
-      navigate("/layout", { replace: true });
+      navigate("/", { replace: true });
       swal({
         title: "Register complete",
         text: "click 'ok' to start in ChallengeApp",
         icon: "success",
       });
     } catch (error) {
-      // Sweet alert de error
+      swal({
+        title: "Password not allowed",
+        text: "MUST contain at least 8 characters (12+ recommended)",
+        icon: "warning",
+      });
     }
   };
 

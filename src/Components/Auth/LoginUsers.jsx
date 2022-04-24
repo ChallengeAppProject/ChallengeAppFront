@@ -2,8 +2,9 @@ import React from "react";
 import "./LoginUsers.css";
 import { useUser } from "./AuthProvider";
 import {login} from "../../Services/APIService";
-import { useNavigate } from "react-router-dom";
-import logo from "../../Assets/LogoChallengeApp.png"
+import { useNavigate, Link } from "react-router-dom";
+import logo from "../../Assets/LogoChallengeApp.png";
+import swal from "sweetalert";
 
 const LoginUsers = () => {
   const [password, setPassword] = React.useState("");
@@ -27,7 +28,12 @@ const LoginUsers = () => {
 
       navigate("/challenges", { replace: true });
     } catch (error) {
-      console.log(error.message);
+      console.log( error.message );
+      swal({
+        title: "User not found or password incorrect",
+        text: "Try again please",
+        icon: "warning",
+      });
     }
   };
 
@@ -43,7 +49,8 @@ const LoginUsers = () => {
             <input
               className="input_login"
               type="text"
-              onChange={(e) => setUsername(e.target.value)}
+              onChange={ ( e ) => setUsername( e.target.value ) }
+              required
             />
           </div>
 
@@ -55,18 +62,22 @@ const LoginUsers = () => {
               className="input_login"
               
               type="password"
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={ ( e ) => setPassword( e.target.value ) }
+              required
             />
           </div>
           <button to="/challenges" className="btn_form_login" type="submit">
             Login
           </button>
         </form>
+        
+       
         <img
           className="login_img"
           src={logo}
           alt="logo"
         />
+        <Link to="/register">Not registered?</Link>
       </div>
     </div>
   );
