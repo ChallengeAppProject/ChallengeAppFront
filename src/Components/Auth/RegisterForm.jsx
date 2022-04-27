@@ -33,7 +33,7 @@ const RegisterForm = () => {
 
       localStorage.setItem("auth_token", data.accessToken);
 
-      navigate("/", { replace: true });
+      navigate("/challenges", { replace: true });
       swal({
         title: "Register complete",
         text: "click 'ok' to start in ChallengeApp",
